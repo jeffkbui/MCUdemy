@@ -48,54 +48,35 @@ class SessionForm extends React.Component {
     render() {
         return (
           this.props.formType === 'signup' ? (
-            <div>
+            <div className='session-forms'>
             <form onSubmit={this.handleSubmit}>
-            <h2>Welcome to MCUdemy!</h2> 
+            <header className='form-header'>Sign Up and Start Learning!</header> 
               {this.state.buttonClicked&&this.renderSignupErrors()}
-              <h3>Please Signup</h3>
               <div>
-                <label>Firstname:
-                    <br/>
-                  <input type="text" value={this.state.first_name} onChange={this.update('first_name')}/>
-                </label>
                 <br/>
-                <label>Lastname:
-                    <br/>
-                  <input type="text" value={this.state.last_name} onChange={this.update('last_name')}/>
-                </label>
+                <input className='form-credentials' type="text" value='First Name' onChange={this.update('first_name')}/>
                 <br/>
-                <label>Email:
-                    <br/>
-                  <input type="text" value={this.state.email} onChange={this.update('email')}/>
-                </label>
+                <input className='form-credentials' type="text" value='Last Name' onChange={this.update('last_name')}/>
                 <br/>
-                <label>Password:
-                    <br/>
-                  <input type="password" value={this.state.password} onChange={this.update('password')} />
-                </label>
+                <input className='form-credentials' type="text" value='Email' onChange={this.update('email')}/>              
+                <br/>               
+                <input className='form-credentials' type="password" value='Password' onChange={this.update('password')} />       
                 <br/>
-                <input type="submit" value='Signup!'/>
+                <input type="submit" value='Sign Up'/>
               </div>
             </form>
           </div>
           ) : (
-            <div>
+            <div className='session-forms'>
             <form onSubmit={this.handleSubmit}>
-              <h2>Welcome to MCUdemy!</h2> 
+              <header className='form-header'>Log In to Your MCUdemy Account!</header> 
               {this.state.buttonClicked&&this.renderLoginErrors()}
-              <h3>Please Login</h3>
               <div>
-                <label>Email:
-                    <br/>
-                  <input type="text" value={this.state.email} onChange={this.update('email')}/>
-                </label>
+                <input className='form-credentials' type="text" value='Email' onChange={this.update('email')}/>
                 <br/>
-                <label>Password:
-                    <br/>
-                  <input type="password" value={this.state.password} onChange={this.update('password')} />
-                </label>
+                <input className='form-credentials' type="password" value='Password' onChange={this.update('password')} />
                 <br/>
-                <input type="submit" value='Login!'/>
+                <input type="submit" value='Log In'/>
               </div>
             </form>
           </div>

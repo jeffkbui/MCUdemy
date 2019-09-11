@@ -28,9 +28,6 @@ const App = () => (
             <GreetingContainer></GreetingContainer>
         </header> 
 
-        <AuthRoute path="/login" component={LoginFormContainer}/>
-        <AuthRoute path="/signup" component={SignupFormContainer}/>
-
         <div className='splash'>
             <div className='header-text1'>Program your future</div>
             <br/>

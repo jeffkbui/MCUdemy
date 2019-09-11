@@ -41,7 +41,33 @@
    left: 50%;
    transform: translate(-50%, -50%);
  }
- 
+
+ .session-forms {
+   display: flex;
+   flex-direction: column;
+   font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+   font-size: 15px;
+   line-height: 1.43;
+   color: #29303b;
+   background-color: #fff;
+   margin: 0;
+   height: 350px;
+   width: 300px;
+   padding: 25px;
+   border-radius: 10px;
+ }
+
+ .form-header {
+   font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+   font-size: 15px;
+   /* margin-bottom: 145px; */
+ }
+
+ .form-credentials {
+   font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+   font-size: 15px;
+ }
+
 .header {
    display: flex;
    flex-direction: row;
