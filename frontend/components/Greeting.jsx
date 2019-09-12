@@ -11,10 +11,12 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     )
 
     const loggedInGreeting = () => (
-        <div>
-            <h2>Hi, {currentUser.first_name}!</h2>
+        <div className='account'>
+            <div className='greeting'>
+                {currentUser.first_name[0]}{currentUser.last_name[0]}
+            </div>
             <br/>
-            <button onClick={logout}>Logout</button>
+            <button className='logout' onClick={logout}>Logout</button>
         </div>
     )
     return currentUser ? loggedInGreeting() : loggedOutGreeting()

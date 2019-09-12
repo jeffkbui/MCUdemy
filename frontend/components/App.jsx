@@ -1,9 +1,5 @@
 import React from 'react';
 import GreetingContainer from '../containers/greeting_container';
-import { Route } from 'react-router-dom';
-import LoginFormContainer from '../containers/login_form_container';
-import SignupFormContainer from '../containers/signup_form_container';
-import { AuthRoute } from '../utils/route_util';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
 
@@ -12,16 +8,21 @@ const App = () => (
         <Modal />
         <header className='header'>
             <div className='header-logo'>
-                <Link to='/' className='logo'>MCU</Link>
-                demy
+                <Link to='/' className='logo'>MCU</Link><Link to='/' className='header-logo'>demy</Link>
+                
             </div>
             <div className='header-categories'>
                 <img className='categories-icon' src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="categories"/>
                 Categories
             </div>
-            <div className='header-search-bar'>
-                Search for anything
-            </div>
+            <form className='header-search-bar'>
+                <input className='search-input' type="text" placeholder='Search for anything'/>
+                <div>
+                    <button className='search-submit' type="submit">
+                        <img className='magnifying-icon' src="https://image.flaticon.com/icons/png/512/63/63322.png" alt=""/>
+                    </button>
+                </div>
+            </form>
             <div>
                 <img className='cart-icon' src="https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png" alt="cart"/>
             </div>
