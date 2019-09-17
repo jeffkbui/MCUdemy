@@ -2,7 +2,7 @@ class Cart < ApplicationRecord
     validates :owner_id, presence: true
 
     belongs_to :user,
-        foreigh_key: :owner_id,
+        foreign_key: :owner_id,
         class_name: :User
 
     has_many :courses,
