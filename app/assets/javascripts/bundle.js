@@ -428,6 +428,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _containers_greeting_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../containers/greeting_container */ "./frontend/containers/greeting_container.js");
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Modal */ "./frontend/components/Modal.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -445,6 +446,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -498,7 +500,7 @@ function (_React$Component) {
           className: "each-who-bullet"
         }, point);
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "course-main-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-logo"
@@ -556,6 +558,10 @@ function (_React$Component) {
       }, "Last updated 9/2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "course-quick-info"
       }, "English")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-page-main-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "left-side"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wyl-main"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "wyl-header"
@@ -582,10 +588,39 @@ function (_React$Component) {
       }, renderWho))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "right-side"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "holder"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sticky-holder"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-fixed-info"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-preview"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        id: "ytplayer",
+        type: "text/html",
+        width: "355",
+        height: "215",
+        src: this.props.course.youtube_code,
+        frameborder: "0"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-price"
+      }, "$", this.props.course.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-buttons"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "add-to-cart"
+      }, "Add to cart"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "buy-now"
+      }, "Buy now")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "money-back"
+      }, "30-Day Money-Back Guarentee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-includes"
+      }, "This course includes", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ondemand-video"
+      }, this.props.course.duration, " hours on-demand video"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "lifetime"
+      }, "Full lifetime access"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "certificate"
+      }, "Certificate of Completion"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footer"
       }));
     }
@@ -836,15 +871,15 @@ function (_React$Component) {
       var user = Object.assign({}, this.state);
       delete user['buttonClicked'];
       this.props.processForm(user).then(function () {
-        return _this3.props.history.push('/');
+        return _this3.props.closeModal();
       });
-      this.props.closeModal();
     }
   }, {
     key: "renderLoginErrors",
     value: function renderLoginErrors() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "errors",
           key: "error-".concat(i)
         }, error);
       }));
@@ -853,7 +888,8 @@ function (_React$Component) {
     key: "renderSignupErrors",
     value: function renderSignupErrors() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "errors",
           key: "error-".concat(i)
         }, error);
       }));
@@ -869,7 +905,7 @@ function (_React$Component) {
         className: "form-header"
       }, "Sign Up and Start Learning!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "line"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.state.buttonClicked && this.renderSignupErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-credentials",
@@ -901,7 +937,7 @@ function (_React$Component) {
         className: "credentials-submit",
         type: "submit",
         value: "Sign Up"
-      })), this.state.buttonClicked && this.renderSignupErrors())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Already have an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Already have an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
         onClick: this.props.openLoginModal,
         className: "other-modal"
@@ -913,7 +949,7 @@ function (_React$Component) {
         className: "form-header"
       }, "Log In to Your MCUdemy Account!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "line"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.state.buttonClicked && this.renderLoginErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-credentials",
@@ -931,7 +967,7 @@ function (_React$Component) {
         className: "credentials-submit",
         type: "submit",
         value: "Log In"
-      })), this.state.buttonClicked && this.renderLoginErrors())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Don't have an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Don't have an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
         onClick: this.props.openSignupModal,
         className: "other-modal"
@@ -31513,7 +31549,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

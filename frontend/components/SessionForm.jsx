@@ -22,17 +22,18 @@ class SessionForm extends React.Component {
         this.setState({buttonClicked: true})
         const user = Object.assign({}, this.state);
         delete user['buttonClicked'];
-        this.props.processForm(user).then(() => this.props.history.push('/'));
-        this.props.closeModal();
+        this.props.processForm(user).then(() => this.props.closeModal());
     }
 
     renderLoginErrors() {
         return(
             <ul>
                 {this.props.errors.map((error, i) => {
-                return (<li key={`error-${i}`}>
+                return (
+                <div className='errors'key={`error-${i}`}>
                     {error}
-                </li>)
+                </div>
+                )
                 })}
             </ul>
         );
@@ -42,9 +43,11 @@ class SessionForm extends React.Component {
         return(
             <ul>
                 {this.props.errors.map((error, i) => {
-                return (<li key={`error-${i}`}>
+                return (
+                <div className='errors' key={`error-${i}`}>
                     {error}
-                </li>)
+                </div>
+                )
                 })}
             </ul>
         );
@@ -60,6 +63,7 @@ class SessionForm extends React.Component {
               <div className='line'></div>
                 <div>
                   <br/>
+                  {this.state.buttonClicked&&this.renderSignupErrors()}
                   <div className='form-box'>
                     <input className='form-credentials' type="text" placeholder='First Name' onChange={this.update('first_name')}/>
                   </div>
@@ -79,7 +83,6 @@ class SessionForm extends React.Component {
                   <div>
                     <input className='credentials-submit' type="submit" value='Sign Up'/>
                   </div>
-                  {this.state.buttonClicked&&this.renderSignupErrors()}
                 </div>
               </form>
               <br/>
@@ -95,6 +98,7 @@ class SessionForm extends React.Component {
               <div className='line'></div>
                 <div>
                   <br/>
+                  {this.state.buttonClicked&&this.renderLoginErrors()}
                   <div className='form-box'>
                     <input className='form-credentials' type="text" placeholder='Email' onChange={this.update('email')}/>
                   </div>
@@ -106,7 +110,6 @@ class SessionForm extends React.Component {
                   <div>
                     <input className='credentials-submit' type="submit" value='Log In'/>
                   </div>
-                  {this.state.buttonClicked&&this.renderLoginErrors()}
                 </div>
               </form>
               <br/>

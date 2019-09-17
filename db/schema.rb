@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_13_231724) do
+ActiveRecord::Schema.define(version: 2019_09_17_025355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_09_13_231724) do
     t.integer "num_students"
     t.integer "num_reviews"
     t.text "who_this_course_is_for", default: [], array: true
+    t.string "youtube_code"
     t.index ["title"], name: "index_courses_on_title", unique: true
   end
 

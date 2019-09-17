@@ -12,4 +12,5 @@ json.extract! course,
     :num_videos, 
     :num_students,
     :num_reviews,
-    :who_this_course_is_for
+    :who_this_course_is_for,
+    :youtube_code
