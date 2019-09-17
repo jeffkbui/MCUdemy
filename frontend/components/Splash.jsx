@@ -26,6 +26,10 @@ const Splash = () => (
                         </button>
                     </div>
                 </form>
+                <div className='profiles-container'>
+                    <a className='linkedin' href="https://www.linkedin.com/in/jeffreykbui/">LinkedIn</a>
+                    <a className='github' href="https://github.com/jeffkbui/MCUdemy/wiki">GitHub</a>
+                </div>
                 <div>
                     <img className='cart-icon' src="https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png" alt="cart"/>
                 </div>
@@ -91,6 +95,9 @@ const Splash = () => (
             <CourseIndexContainer />
         </div> 
 
+        <div className='splash-footer'>
+
+        </div>
     </div>
 )
 

@@ -333,7 +333,11 @@ function (_React$Component) {
           ownProps: _this.props
         });
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, courses));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-index-title"
+      }, "Students are viewing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-index-main"
+      }, courses));
     }
   }]);
 
@@ -395,16 +399,40 @@ function (_React$Component) {
   _createClass(CourseIndexItem, [{
     key: "handleRedirect",
     value: function handleRedirect() {
-      debugger;
       this.props.history.push("/api/courses/".concat(this.props.course.id));
-      debugger;
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "course-item-link"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-item-main",
         onClick: this.handleRedirect
-      }, " ", this.props.course.title);
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        id: "ytplayer",
+        type: "text/html",
+        width: "231",
+        height: "122",
+        src: this.props.course.youtube_code,
+        frameborder: "0"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item-title"
+      }, this.props.course.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item-index-text-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item-instructor"
+      }, this.props.course.instructor), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item-ratings-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "star-rating",
+        src: "https://alarm-reviews.net/wp-content/themes/goodnex/inc/images/4.5.svg",
+        alt: "ratings"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "item-ratings-2"
+      }, "4.5"), "(", this.props.course.num_reviews, ")"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item-price"
+      }, "$", this.props.course.price)))));
     }
   }]);
 
@@ -478,6 +506,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
       var wylArray = this.props.course.what_youll_learn || [];
       var renderWyl = wylArray.map(function (section) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -529,7 +559,15 @@ function (_React$Component) {
         className: "magnifying-icon",
         src: "https://image.flaticon.com/icons/png/512/63/63322.png",
         alt: ""
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "profiles-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "linkedin",
+        href: "https://www.linkedin.com/in/jeffreykbui/"
+      }, "LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "github",
+        href: "https://github.com/jeffkbui/MCUdemy/wiki"
+      }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "cart-icon",
         src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
         alt: "cart"
@@ -593,15 +631,18 @@ function (_React$Component) {
         className: "sticky-holder"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-fixed-info"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "video-preview"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "video-preview",
+        onClick: function onClick() {
+          return _this.props.openModal('video');
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
         id: "ytplayer",
         type: "text/html",
         width: "355",
         height: "215",
         src: this.props.course.youtube_code,
-        frameborder: "0"
+        frameBorder: "0"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-price"
       }, "$", this.props.course.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -616,13 +657,55 @@ function (_React$Component) {
         className: "course-includes"
       }, "This course includes", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ondemand-video"
-      }, this.props.course.duration, " hours on-demand video"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.props.course.duration, " minutes on-demand video"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "lifetime"
       }, "Full lifetime access"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "certificate"
       }, "Certificate of Completion"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "footer"
-      }));
+        className: "course-show-footer-main"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-show-footer-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footer-text"
+      }, "Top companies choose MCUdemy to build in-demand Marvel skills."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footer-images"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/lyft-logo.svg",
+        alt: "lyft"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/pinterest-logo.svg",
+        alt: "pinterest"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/adidas-logo.svg",
+        alt: "adidas"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/eventbrite-logo.svg",
+        alt: "event"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/surveymonkey-logo.svg",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/booking-logo.svg",
+        alt: "booking"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-show-footer-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-logo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/",
+        className: "logo2"
+      }, "MCU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/",
+        className: "header-logo"
+      }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "copyright"
+      }, "Copyright 2019 MCUdemy, Inc."))));
     }
   }]);
 
@@ -672,7 +755,17 @@ var Greeting = function Greeting(_ref) {
       className: "account"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "greeting"
-    }, currentUser.first_name[0], currentUser.last_name[0]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, currentUser.first_name[0], currentUser.last_name[0]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "user-dropdown"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "greeting"
+    }, currentUser.first_name[0], currentUser.last_name[0]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "account-info-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "full-name"
+    }, currentUser.first_name, currentUser.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "email"
+    }, currentUser.email))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Logout")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "logout",
       onClick: logout
     }, "Logout"));
@@ -700,6 +793,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/modal_actions */ "./frontend/actions/modal_actions.js");
 /* harmony import */ var _containers_login_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../containers/login_form_container */ "./frontend/containers/login_form_container.js");
 /* harmony import */ var _containers_signup_form_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/signup_form_container */ "./frontend/containers/signup_form_container.js");
+/* harmony import */ var _containers_video_modal_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../containers/video_modal_container */ "./frontend/containers/video_modal_container.js");
+
 
 
 
@@ -723,6 +818,10 @@ var Modal = function Modal(_ref) {
 
     case 'signup':
       component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_signup_form_container__WEBPACK_IMPORTED_MODULE_4__["default"], null);
+      break;
+
+    case 'video':
+      component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_video_modal_container__WEBPACK_IMPORTED_MODULE_5__["default"], null);
       break;
 
     default:
@@ -1035,7 +1134,15 @@ var Splash = function Splash() {
     className: "magnifying-icon",
     src: "https://image.flaticon.com/icons/png/512/63/63322.png",
     alt: ""
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "profiles-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "linkedin",
+    href: "https://www.linkedin.com/in/jeffreykbui/"
+  }, "LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "github",
+    href: "https://github.com/jeffkbui/MCUdemy/wiki"
+  }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "cart-icon",
     src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
     alt: "cart"
@@ -1083,10 +1190,70 @@ var Splash = function Splash() {
     className: "splash2-text2"
   }, "Learn on your schedule"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "main-course-index"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_course_index_container__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_course_index_container__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-footer"
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
+
+/***/ }),
+
+/***/ "./frontend/components/VideoModal.jsx":
+/*!********************************************!*\
+  !*** ./frontend/components/VideoModal.jsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var VideoModal =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(VideoModal, _React$Component);
+
+  function VideoModal(props) {
+    _classCallCheck(this, VideoModal);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(VideoModal).call(this, props));
+  }
+
+  _createClass(VideoModal, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-modal"
+      }, "Modal is working");
+    }
+  }]);
+
+  return VideoModal;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (VideoModal);
 
 /***/ }),
 
@@ -1138,8 +1305,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _components_CourseShow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/CourseShow */ "./frontend/components/CourseShow.jsx");
-/* harmony import */ var _actions_course_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions/course_actions */ "./frontend/actions/course_actions.js");
+/* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/modal_actions */ "./frontend/actions/modal_actions.js");
+/* harmony import */ var _components_CourseShow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/CourseShow */ "./frontend/components/CourseShow.jsx");
+/* harmony import */ var _actions_course_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions/course_actions */ "./frontend/actions/course_actions.js");
+
 
 
 
@@ -1147,19 +1316,23 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    course: state.entities.courses[ownProps.match.params.courseId] || {}
+    course: state.entities.courses[ownProps.match.params.courseId] || {},
+    ui: state.ui
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchCourse: function fetchCourse(id) {
-      return dispatch(Object(_actions_course_actions__WEBPACK_IMPORTED_MODULE_3__["fetchCourse"])(id));
+      return dispatch(Object(_actions_course_actions__WEBPACK_IMPORTED_MODULE_4__["fetchCourse"])(id));
+    },
+    openModal: function openModal(modal) {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_2__["openModal"])(modal));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_components_CourseShow__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_components_CourseShow__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 
@@ -1291,6 +1464,43 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_components_SessionForm__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/containers/video_modal_container.js":
+/*!******************************************************!*\
+  !*** ./frontend/containers/video_modal_container.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/modal_actions */ "./frontend/actions/modal_actions.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_VideoModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/VideoModal */ "./frontend/components/VideoModal.jsx");
+
+
+
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    course: state.entities.courses[ownProps.match.params.courseId] || {}
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    closeModal: function closeModal() {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_1__["closeModal"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_components_VideoModal__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 

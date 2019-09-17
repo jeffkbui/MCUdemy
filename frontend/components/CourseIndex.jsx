@@ -19,9 +19,14 @@ class CourseIndex extends React.Component {
 
         return (
             <div>
-                <ul>{courses}</ul>
+                <div className='course-index-title'>
+                    Students are viewing
+                </div>
+                 <div className='course-index-main'>
+                    {courses}
+                </div>
             </div>
-        )
+        ) 
     }
 }
 

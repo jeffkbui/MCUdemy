@@ -8,14 +8,44 @@ class CourseIndexItem extends React.Component {
     }
 
     handleRedirect() {
-        debugger;
+        
         this.props.history.push(`/api/courses/${this.props.course.id}`)
-        debugger;
     }
 
     render() {
         return (
-            <Link onClick={this.handleRedirect}> {this.props.course.title}</Link>
+            <div>
+                <Link className='course-item-link'>
+                <div className='course-item-main' onClick={this.handleRedirect}>
+                    <div>
+                        <iframe 
+                            id="ytplayer" 
+                            type="text/html" 
+                            width="231" 
+                            height="122" 
+                            src={this.props.course.youtube_code}
+                            frameborder="0"> 
+                        </iframe>
+                    </div>
+                    <div className='item-title'>
+                        {this.props.course.title}
+                    </div>
+                    <div className='item-index-text-container'>
+                        <div className='item-instructor'>
+                            {this.props.course.instructor}
+                        </div>
+                        <div className='item-ratings-1'>
+                        <img className='star-rating' src="https://alarm-reviews.net/wp-content/themes/goodnex/inc/images/4.5.svg" alt="ratings"/>
+                            <div id='item-ratings-2'>4.5</div>
+                            ({this.props.course.num_reviews})
+                        </div>
+                        <div className='item-price'>
+                            ${this.props.course.price}
+                        </div>
+                    </div>
+                </div>
+                </Link>
+            </div>
         )
     }
 }

@@ -15,6 +15,23 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <div className='greeting'>
                 {currentUser.first_name[0]}{currentUser.last_name[0]}
             </div>
+                <div className='user-dropdown'>
+                    <div>
+                        <div className='greeting'>
+                            {currentUser.first_name[0]}{currentUser.last_name[0]}
+                        </div>
+                        <div className='account-info-container'>
+                            <div className='full-name'>
+                                {currentUser.first_name}{currentUser.last_name}
+                            </div>
+                            <div className='email'>
+                                {currentUser.email}
+                            </div>
+                        </div>
+                    </div>
+                    <div>Account</div>
+                    <div>Logout</div>
+                </div>
             <br/>
             <button className='logout' onClick={logout}>Logout</button>
         </div>

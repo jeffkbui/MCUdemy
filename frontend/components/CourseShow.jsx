@@ -40,13 +40,13 @@ class CourseShow extends React.Component {
                 {point}
             </li>
         ))
+    
         return (
             <div>
                 <Modal/>
                 <header className='course-main-header'>
                     <div className='header-logo'>
                         <Link to='/' className='logo'>MCU</Link><Link to='/' className='header-logo'>demy</Link>
-                        
                     </div>
                     <div className='header-categories'>
                         <img className='categories-icon' src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="categories"/>
@@ -60,6 +60,10 @@ class CourseShow extends React.Component {
                             </button>
                         </div>
                     </form>
+                    <div className='profiles-container'>
+                        <a className='linkedin' href="https://www.linkedin.com/in/jeffreykbui/">LinkedIn</a>
+                        <a className='github' href="https://github.com/jeffkbui/MCUdemy/wiki">GitHub</a>
+                    </div>
                     <div>
                         <img className='cart-icon' src="https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png" alt="cart"/>
                     </div>
@@ -84,7 +88,6 @@ class CourseShow extends React.Component {
                             <p className='course-quick-info'>Last updated 9/2019</p>
                             <p className='course-quick-info'>English</p>
                         </div>
-                        
                     </div>
                 </div>
 
@@ -127,16 +130,16 @@ class CourseShow extends React.Component {
                         <div className='holder'>
                             <div className='sticky-holder'>
                                 <div className='course-fixed-info'>
-                                    <div className='video-preview'>
-                                        <iframe id="ytplayer" 
+                                    <button className='video-preview' onClick={() => this.props.openModal('video')}>
+                                        <iframe 
+                                            id="ytplayer" 
                                             type="text/html" 
                                             width="355" 
                                             height="215" 
                                             src={this.props.course.youtube_code}
-                                            frameborder="0"> 
+                                            frameBorder="0"> 
                                         </iframe>
-                                        
-                                    </div>
+                                    </button>
                                     <div className='course-price'>
                                         ${this.props.course.price}
                                     </div>
@@ -154,7 +157,7 @@ class CourseShow extends React.Component {
                                     <div className='course-includes'>
                                         This course includes
                                         <div className='ondemand-video'>
-                                            {this.props.course.duration} hours on-demand video
+                                            {this.props.course.duration} minutes on-demand video
                                         </div>
                                         <div className='lifetime'>
                                             Full lifetime access
@@ -170,7 +173,28 @@ class CourseShow extends React.Component {
 
                 </div>
 
-                <div className='footer'></div>
+                <div className='course-show-footer-main'>
+                    <div className='course-show-footer-1'>
+                        <div className='footer-text'>
+                            Top companies choose MCUdemy to build in-demand Marvel skills.
+                        </div>
+                        <div className='footer-images'>
+                            <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/lyft-logo.svg" alt="lyft"/>
+                            <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/pinterest-logo.svg" alt="pinterest"/>
+                            <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/adidas-logo.svg" alt="adidas"/>
+                            <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/eventbrite-logo.svg" alt="event"/>
+                            <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/surveymonkey-logo.svg" alt=""/>
+                            <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/booking-logo.svg" alt="booking"/>
+                        </div>
+                    </div>
+                    <div className='course-show-footer-2'>
+                        <div className='header-logo'>
+                            <Link to='/' className='logo2'>MCU</Link><Link to='/' className='header-logo'>demy</Link>
+                        </div>
+                        <div className='copyright'>Copyright 2019 MCUdemy, Inc.</div>
+                        
+                    </div>
+                </div>
             </div>
         )
     }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { closeModal } from '../actions/modal_actions';
 import LoginFormContainer from '../containers/login_form_container';
 import SignupFormContainer from '../containers/signup_form_container';
+import VideoModalContainer from '../containers/video_modal_container';
 
 const Modal = ({modal, closeModal}) => {
   if (!modal) {
@@ -15,6 +16,9 @@ const Modal = ({modal, closeModal}) => {
       break;
     case 'signup':
       component = <SignupFormContainer />;
+      break;
+    case 'video':
+      component = <VideoModalContainer />
       break;
     default:
       return null;
