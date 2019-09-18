@@ -624,11 +624,10 @@ function (_React$Component) {
       }, "Who this course is for:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "who-bullets"
       }, renderWho))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "right-side"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "holder"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sticky-holder"
+        className: "right-side",
+        style: {
+          height: $('body').height() - 400
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-fixed-info"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -661,7 +660,7 @@ function (_React$Component) {
         className: "lifetime"
       }, "Full lifetime access"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "certificate"
-      }, "Certificate of Completion"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Certificate of Completion"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-show-footer-main"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-show-footer-1"

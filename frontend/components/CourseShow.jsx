@@ -40,7 +40,7 @@ class CourseShow extends React.Component {
                 {point}
             </li>
         ))
-    
+            
         return (
             <div>
                 <Modal/>
@@ -126,46 +126,44 @@ class CourseShow extends React.Component {
                         </div>
                     </div>
 
-                    <div className='right-side'>
-                        <div className='holder'>
-                            <div className='sticky-holder'>
-                                <div className='course-fixed-info'>
-                                    <button className='video-preview' onClick={() => this.props.openModal('video')}>
-                                        <iframe 
-                                            id="ytplayer" 
-                                            type="text/html" 
-                                            width="355" 
-                                            height="215" 
-                                            src={this.props.course.youtube_code}
-                                            frameBorder="0"> 
-                                        </iframe>
-                                    </button>
-                                    <div className='course-price'>
-                                        ${this.props.course.price}
-                                    </div>
-                                    <div className='course-buttons'>
-                                        <div className='add-to-cart'>
-                                            Add to cart
-                                        </div>
-                                        <div className='buy-now'>
-                                            Buy now
-                                        </div>
-                                    </div>
-                                    <div className='money-back'>
-                                        30-Day Money-Back Guarentee
-                                    </div>
-                                    <div className='course-includes'>
-                                        This course includes
-                                        <div className='ondemand-video'>
-                                            {this.props.course.duration} minutes on-demand video
-                                        </div>
-                                        <div className='lifetime'>
-                                            Full lifetime access
-                                        </div>
-                                        <div  className='certificate'>
-                                            Certificate of Completion
-                                        </div>
-                                    </div>
+                    <div className='right-side' style={{
+                            height: ($('body').height() - 400)
+                        }}>
+                        <div className='course-fixed-info'>
+                            <button className='video-preview' onClick={() => this.props.openModal('video')}>
+                                <iframe 
+                                    id="ytplayer" 
+                                    type="text/html" 
+                                    width="355" 
+                                    height="215" 
+                                    src={this.props.course.youtube_code}
+                                    frameBorder="0"> 
+                                </iframe>
+                            </button>
+                            <div className='course-price'>
+                                ${this.props.course.price}
+                            </div>
+                            <div className='course-buttons'>
+                                <div className='add-to-cart'>
+                                    Add to cart
+                                </div>
+                                <div className='buy-now'>
+                                    Buy now
+                                </div>
+                            </div>
+                            <div className='money-back'>
+                                30-Day Money-Back Guarentee
+                            </div>
+                            <div className='course-includes'>
+                                This course includes
+                                <div className='ondemand-video'>
+                                    {this.props.course.duration} minutes on-demand video
+                                </div>
+                                <div className='lifetime'>
+                                    Full lifetime access
+                                </div>
+                                <div  className='certificate'>
+                                    Certificate of Completion
                                 </div>
                             </div>
                         </div>
