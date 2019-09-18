@@ -32,6 +32,7 @@ const Splash = () => (
                 </div>
                 <div>
                     <img className='cart-icon' src="https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png" alt="cart"/>
+                    <div className='cart'>Cart is empty</div>
                 </div>
                 <GreetingContainer></GreetingContainer>
             </header> 

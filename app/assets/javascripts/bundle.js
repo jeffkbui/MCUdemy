@@ -530,7 +530,9 @@ function (_React$Component) {
           className: "each-who-bullet"
         }, point);
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        course: this.props.course
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "course-main-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-logo"
@@ -635,14 +637,13 @@ function (_React$Component) {
         onClick: function onClick() {
           return _this.props.openModal('video');
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        id: "ytplayer",
-        type: "text/html",
-        width: "355",
-        height: "215",
-        src: this.props.course.youtube_code,
-        frameBorder: "0"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "play-button-circle"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "play-button",
+        src: "https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-price"
       }, "$", this.props.course.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-buttons"
@@ -756,7 +757,9 @@ var Greeting = function Greeting(_ref) {
       className: "greeting"
     }, currentUser.first_name[0], currentUser.last_name[0]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "user-dropdown"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "dropdown-content"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "greeting"
     }, currentUser.first_name[0], currentUser.last_name[0]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "account-info-container"
@@ -764,10 +767,16 @@ var Greeting = function Greeting(_ref) {
       className: "full-name"
     }, currentUser.first_name, currentUser.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "email"
-    }, currentUser.email))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Logout")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "logout",
+    }, currentUser.email))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "",
+      className: "drop-down-option"
+    }, "Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "line"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "",
+      className: "drop-down-option",
       onClick: logout
-    }, "Logout"));
+    }, "Logout")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
   };
 
   return currentUser ? loggedInGreeting() : loggedOutGreeting();
@@ -802,7 +811,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var Modal = function Modal(_ref) {
   var modal = _ref.modal,
-      closeModal = _ref.closeModal;
+      closeModal = _ref.closeModal,
+      course = _ref.course;
 
   if (!modal) {
     return null;
@@ -820,7 +830,9 @@ var Modal = function Modal(_ref) {
       break;
 
     case 'video':
-      component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_video_modal_container__WEBPACK_IMPORTED_MODULE_5__["default"], null);
+      component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_video_modal_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        course: course
+      });
       break;
 
     default:
@@ -945,6 +957,7 @@ function (_React$Component) {
       buttonClicked: false
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.handleDemoUser = _this.handleDemoUser.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -970,6 +983,22 @@ function (_React$Component) {
       delete user['buttonClicked'];
       this.props.processForm(user).then(function () {
         return _this3.props.closeModal();
+      });
+    }
+  }, {
+    key: "handleDemoUser",
+    value: function handleDemoUser(event) {
+      var _this4 = this;
+
+      event.preventDefault();
+      var demoUser = {
+        first_name: 'Tony',
+        last_name: 'Stark',
+        email: 'tony.stark@starkindustries.com',
+        password: 'iloveironman'
+      };
+      this.props.processForm(demoUser).then(function () {
+        return _this4.props.closeModal();
       });
     }
   }, {
@@ -1069,7 +1098,10 @@ function (_React$Component) {
         href: "#",
         onClick: this.props.openSignupModal,
         className: "other-modal"
-      }, "Sign Up")));
+      }, "Sign Up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Don't want to create an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        onClick: this.handleDemoUser
+      }, "Demo User")));
     }
   }]);
 
@@ -1145,7 +1177,9 @@ var Splash = function Splash() {
     className: "cart-icon",
     src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
     alt: "cart"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "cart"
+  }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-text1"
@@ -1209,6 +1243,7 @@ var Splash = function Splash() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1229,6 +1264,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var VideoModal =
 /*#__PURE__*/
 function (_React$Component) {
@@ -1241,18 +1277,36 @@ function (_React$Component) {
   }
 
   _createClass(VideoModal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchCourse(this.props.match.params.courseId);
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "video-modal"
-      }, "Modal is working");
+        className: "video-modal-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-modal-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-modal-title"
+      }, this.props.course.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        id: "ytplayer",
+        type: "text/html",
+        width: "640",
+        height: "432",
+        src: this.props.course.youtube_code,
+        frameBorder: "0"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-modal-footer"
+      }));
     }
   }]);
 
   return VideoModal;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (VideoModal);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(VideoModal));
 
 /***/ }),
 
@@ -1480,6 +1534,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_VideoModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/VideoModal */ "./frontend/components/VideoModal.jsx");
+/* harmony import */ var _actions_course_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions/course_actions */ "./frontend/actions/course_actions.js");
+
 
 
 
@@ -1487,7 +1543,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    course: state.entities.courses[ownProps.match.params.courseId] || {}
+    courses: state.entities.courses || {}
   };
 };
 
@@ -1495,6 +1551,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     closeModal: function closeModal() {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_1__["closeModal"])());
+    },
+    fetchCourse: function fetchCourse(id) {
+      return dispatch(Object(_actions_course_actions__WEBPACK_IMPORTED_MODULE_4__["fetchCourse"])(id));
     }
   };
 };

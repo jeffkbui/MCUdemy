@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resource :session, only: [:show, :create, :destroy]
 
     resources :courses, only: [:index, :show] do
-    #   resources :lectures
+      resources :lectures, only: [:show]
     #   resources :reviews
     end
     

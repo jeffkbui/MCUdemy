@@ -5,7 +5,7 @@ import LoginFormContainer from '../containers/login_form_container';
 import SignupFormContainer from '../containers/signup_form_container';
 import VideoModalContainer from '../containers/video_modal_container';
 
-const Modal = ({modal, closeModal}) => {
+const Modal = ({modal, closeModal, course}) => {
   if (!modal) {
     return null;
   }
@@ -18,12 +18,12 @@ const Modal = ({modal, closeModal}) => {
       component = <SignupFormContainer />;
       break;
     case 'video':
-      component = <VideoModalContainer />
+      component = <VideoModalContainer course={course}/>
       break;
     default:
       return null;
   }
-  
+
   return (
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>

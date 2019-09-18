@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
         super(props);
         this.state = { first_name: '', last_name: '', email: '', password: '', buttonClicked: false}
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoUser = this.handleDemoUser.bind(this)
     }
 
     update(field) {
@@ -23,6 +24,17 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         delete user['buttonClicked'];
         this.props.processForm(user).then(() => this.props.closeModal());
+    }
+
+    handleDemoUser(event) {
+      event.preventDefault();
+      const demoUser = {
+        first_name: 'Tony',
+        last_name: 'Stark',
+        email: 'tony.stark@starkindustries.com',
+        password: 'iloveironman'
+      }
+      this.props.processForm(demoUser).then(() => this.props.closeModal());
     }
 
     renderLoginErrors() {
@@ -115,6 +127,9 @@ class SessionForm extends React.Component {
               <br/>
               <div>
                 Don't have an account? <a href="#" onClick={this.props.openSignupModal} className='other-modal'>Sign Up</a>
+              </div>
+              <div>
+                Don't want to create an account? <a href="#" onClick={this.handleDemoUser}>Demo User</a>
               </div>
           </div>
           )

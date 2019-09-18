@@ -40,10 +40,10 @@ class CourseShow extends React.Component {
                 {point}
             </li>
         ))
-            
+
         return (
             <div>
-                <Modal/>
+                <Modal course={this.props.course}/>
                 <header className='course-main-header'>
                     <div className='header-logo'>
                         <Link to='/' className='logo'>MCU</Link><Link to='/' className='header-logo'>demy</Link>
@@ -131,14 +131,9 @@ class CourseShow extends React.Component {
                         }}>
                         <div className='course-fixed-info'>
                             <button className='video-preview' onClick={() => this.props.openModal('video')}>
-                                <iframe 
-                                    id="ytplayer" 
-                                    type="text/html" 
-                                    width="355" 
-                                    height="215" 
-                                    src={this.props.course.youtube_code}
-                                    frameBorder="0"> 
-                                </iframe>
+                                <div className='play-button-circle'>
+                                    <img className='play-button' src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png" alt=""/>
+                                </div>
                             </button>
                             <div className='course-price'>
                                 ${this.props.course.price}
