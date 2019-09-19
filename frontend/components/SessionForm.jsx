@@ -13,10 +13,10 @@ class SessionForm extends React.Component {
     }
 
     update(field) {
-        return event => this.setState({
-          [field]: event.target.value
-        });
-      }
+      return event => this.setState({
+        [field]: event.target.value
+      });
+    }
 
     handleSubmit(event) {
         event.preventDefault();
@@ -100,6 +100,9 @@ class SessionForm extends React.Component {
               <br/>
             <div>
               Already have an account? <a href="#" onClick={this.props.openLoginModal} className='other-modal'>Log In</a>
+            </div>
+            <div>
+                Don't want to create an account? <a href="#" onClick={this.handleDemoUser} className='other-modal'>Demo User</a>
             </div>
           </div>
           ) : (

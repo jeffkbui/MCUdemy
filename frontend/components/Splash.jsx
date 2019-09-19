@@ -1,10 +1,11 @@
 import React from 'react';
 import GreetingContainer from '../containers/greeting_container';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Modal from './Modal';
 import CourseIndexContainer from '../containers/course_index_container';
 
-const Splash = () => (
+const Splash = (props) => {
+    return (
     <div>
 
         <div className='main-splash-page'>
@@ -18,7 +19,7 @@ const Splash = () => (
                     <img className='categories-icon' src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="categories"/>
                     Categories
                 </div>
-                <form className='header-search-bar'>
+                <form className='header-search-bar' onSubmit={() => props.history.push('/api/search-courses')}>
                     <input className='search-input' type="text" placeholder='Search for anything'/>
                     <div>
                         <button className='search-submit' type="submit">
@@ -120,5 +121,6 @@ const Splash = () => (
         </div>
     </div>
 )
+}
 
 export default Splash;

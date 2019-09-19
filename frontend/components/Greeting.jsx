@@ -36,7 +36,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className='drop-down-option'>Account</div>
+                        <Link to={`/api/users/${currentUser.id}/edit`} className='drop-down-option'>Account</Link>
                         <div className='line'></div>
                         <div className='drop-down-option' onClick={logout}>Logout</div>
                     </div>

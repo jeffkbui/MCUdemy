@@ -15,7 +15,7 @@ User.create!(first_name: 'Meeko', last_name: 'Rayo', email: 'meeko@gmail.com', p
 User.create!(first_name: 'Tony', last_name: 'Stark', email: 'tony.stark@starkindustries.com', password: 'iloveironman')
 
 #Lecture
-Lecture.create!(title: "Odin Makes: Thor's Hammer")
+Lecture.create!(title: "The Official MCU Timeline Explained")
 
 # Courses
 Course.create!(
@@ -32,7 +32,7 @@ Course.create!(
     num_students: 1745,
     num_reviews: 25,
     who_this_course_is_for: ["This course is for people who have a passion for arts and crafts", "Opened to adults and children of all ages!", "Anybody who loves Marvel and/or Thor"],
-    youtube_code: "https://www.youtube.com/embed/JRjI-dvK_eo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/JRjI-dvK_eo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -49,7 +49,7 @@ Course.create!(
     num_students: 3588,
     num_reviews: 145,
     who_this_course_is_for: ["This course is for people who have a passion for arts and crafts", "Opened to adults and children of all ages!", "Anybody who loves Marvel and/or Thor"],
-    youtube_code: "https://www.youtube.com/embed/TZb2wxlUwVM?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/TZb2wxlUwVM?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -66,7 +66,7 @@ Course.create!(
     num_students: 5445,
     num_reviews: 210,
     who_this_course_is_for: ["Anyone who loves to create fun things", "Marvel fans", "People with experience in crafting with heavy metals"],
-    youtube_code: "https://www.youtube.com/embed/vvbRX1WKbiE?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/vvbRX1WKbiE?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -83,7 +83,7 @@ Course.create!(
     num_students: 912,
     num_reviews: 12,
     who_this_course_is_for: ["Parkour enthusiasts", "Marvel fans", "People who know how to perform parkour", "People who know how to fall safely"],
-    youtube_code: "https://www.youtube.com/embed/OwxIyhDX1Ew?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/OwxIyhDX1Ew?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -100,7 +100,7 @@ Course.create!(
     num_students: 9986,
     num_reviews: 423,
     who_this_course_is_for: ["Marvel Fans", "Anybody interested in learning more about the MCU!"],
-    youtube_code: "https://www.youtube.com/embed/hFRDkSR2OEo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/hFRDkSR2OEo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -117,7 +117,7 @@ Course.create!(
     num_students: 15,
     num_reviews: 2,
     who_this_course_is_for: ["People with experience in electronics", "Crafty people", "Those who have the time to commit to building the suit", "Experience with using powertools", "Iron Man/Marvel fans"],
-    youtube_code: "https://www.youtube.com/embed/8dy9tAhweeU?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/8dy9tAhweeU?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -134,7 +134,7 @@ Course.create!(
     num_students: 1701,
     num_reviews: 590,
     who_this_course_is_for: ["Iron Man enthusiasts", "Marvel fanatics", "Those with a theoretical mindset"],
-    youtube_code: "https://www.youtube.com/embed/pr0MB6GH-oM?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/pr0MB6GH-oM?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 

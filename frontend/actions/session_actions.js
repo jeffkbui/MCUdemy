@@ -39,3 +39,10 @@ export const logout = () => dispatch => (
     dispatch(logoutCurrentUser())
   ))
 );
+
+export const edit = (user) => dispatch => (
+  APIUtil.edit(user).then( user => (
+    dispatch(receiveCurrentUser(user))
+  ))
+);
+

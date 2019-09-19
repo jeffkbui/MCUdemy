@@ -21,11 +21,9 @@ class LectureIndexItem extends React.Component {
                     {this.props.lecture.title}
                 </div>
                 <div className='my-courses-instructor'>
-                    Odin Makes
+                    CBR
                 </div>
-                <div className='my-couse-divider'>
-
-                </div>
+                <div className='my-couse-divider'></div>
                 <div className='start-course'>
                     START COURSE
                 </div>
