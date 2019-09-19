@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout, openModal }) => {
 
@@ -11,29 +12,37 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     )
 
     const loggedInGreeting = () => (
-        <div className='account'>
-            <div className='greeting'>
-                {currentUser.first_name[0]}{currentUser.last_name[0]}
+        <div className='logged-in-main'>
+
+            <div>
+                <Link className='my-courses-link' to='/api/lectures'>My Courses</Link>
             </div>
-                <div className='user-dropdown'>
-                    <div className='dropdown-content'> 
-                        <div className='greeting'>
-                            {currentUser.first_name[0]}{currentUser.last_name[0]}
-                        </div>
-                        <div className='account-info-container'>
-                            <div className='full-name'>
-                                {currentUser.first_name}{currentUser.last_name}
-                            </div>
-                            <div className='email'>
-                                {currentUser.email}
-                            </div>
-                        </div>
-                    </div>
-                    <a href='' className='drop-down-option'>Account</a>
-                    <div className='line'></div>
-                    <a href='' className='drop-down-option' onClick={logout}>Logout</a>
+
+            <div className='account'>
+                <div className='greeting'>
+                    {currentUser.first_name[0]}{currentUser.last_name[0]}
                 </div>
-            <br/>
+                    <div className='user-dropdown'>
+                        <div className='dropdown-content'> 
+                            <div className='greeting'>
+                                {currentUser.first_name[0]}{currentUser.last_name[0]}
+                            </div>
+                            <div className='account-info-container'>
+                                <div className='full-name'>
+                                    {currentUser.first_name}{currentUser.last_name}
+                                </div>
+                                <div className='email'>
+                                    {currentUser.email}
+                                </div>
+                            </div>
+                        </div>
+                        <div className='drop-down-option'>Account</div>
+                        <div className='line'></div>
+                        <div className='drop-down-option' onClick={logout}>Logout</div>
+                    </div>
+                <br/>
+            </div>
+
         </div>
     )
     return currentUser ? loggedInGreeting() : loggedOutGreeting()

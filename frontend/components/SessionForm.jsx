@@ -129,7 +129,7 @@ class SessionForm extends React.Component {
                 Don't have an account? <a href="#" onClick={this.props.openSignupModal} className='other-modal'>Sign Up</a>
               </div>
               <div>
-                Don't want to create an account? <a href="#" onClick={this.handleDemoUser}>Demo User</a>
+                Don't want to create an account? <a href="#" onClick={this.handleDemoUser} className='other-modal'>Demo User</a>
               </div>
           </div>
           )

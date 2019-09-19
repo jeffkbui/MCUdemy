@@ -9,11 +9,8 @@ Rails.application.routes.draw do
     end
 
     resource :session, only: [:show, :create, :destroy]
-
-    resources :courses, only: [:index, :show] do
-      resources :lectures, only: [:show]
+    resources :courses, only: [:index, :show]
+    resources :lectures, only: [:show, :index]
     #   resources :reviews
-    end
-    
   end
 end

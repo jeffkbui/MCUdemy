@@ -96,8 +96,27 @@ const Splash = () => (
             <CourseIndexContainer />
         </div> 
 
-        <div className='splash-footer'>
-
+        <div className='splash-footer-main'>
+            <div className='course-show-footer-1'>
+                <div className='footer-text'>
+                    Top companies choose MCUdemy to build in-demand Marvel skills.
+                </div>
+                <div className='footer-images'>
+                    <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/lyft-logo.svg" alt="lyft"/>
+                    <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/pinterest-logo.svg" alt="pinterest"/>
+                    <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/adidas-logo.svg" alt="adidas"/>
+                    <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/eventbrite-logo.svg" alt="event"/>
+                    <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/surveymonkey-logo.svg" alt=""/>
+                    <img className='footer-company-image' src="https://i.udemycdn.com/partner-logos/booking-logo.svg" alt="booking"/>
+                </div>
+            </div>
+            <div className='course-show-footer-2'>
+                <div className='header-logo'>
+                    <Link to='/' className='logo2'>MCU</Link><Link to='/' className='header-logo'>demy</Link>
+                </div>
+                <div className='copyright'>Copyright 2019 MCUdemy, Inc.</div>
+                
+            </div>
         </div>
     </div>
 )

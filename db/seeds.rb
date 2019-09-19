@@ -14,6 +14,9 @@ User.create!(first_name: 'Francis', last_name: 'Anand', email: 'fanand@gmail.com
 User.create!(first_name: 'Meeko', last_name: 'Rayo', email: 'meeko@gmail.com', password: '123456')
 User.create!(first_name: 'Tony', last_name: 'Stark', email: 'tony.stark@starkindustries.com', password: 'iloveironman')
 
+#Lecture
+Lecture.create!(title: "Odin Makes: Thor's Hammer")
+
 # Courses
 Course.create!(
     title: "Odin Makes: Thor's Hammer", 

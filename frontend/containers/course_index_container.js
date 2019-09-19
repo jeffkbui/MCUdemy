@@ -5,7 +5,6 @@ import { fetchCourses } from '../actions/course_actions';
 const mapStateToProps = (state) => {
     return {
         courses: Object.keys(state.entities.courses).map( id => state.entities.courses[id]),
-        
     }
 };
 

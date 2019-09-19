@@ -8,14 +8,13 @@ class CourseIndexItem extends React.Component {
     }
 
     handleRedirect() {
-        
         this.props.history.push(`/api/courses/${this.props.course.id}`)
     }
 
     render() {
         return (
             <div>
-                <Link className='course-item-link'>
+                <Link to={`/api/courses/${this.props.course.id}`} className='course-item-link'>
                 <div className='course-item-main' onClick={this.handleRedirect}>
                     <div>
                         <iframe 
@@ -24,7 +23,7 @@ class CourseIndexItem extends React.Component {
                             width="231" 
                             height="122" 
                             src={this.props.course.youtube_code}
-                            frameborder="0"> 
+                            frameBorder="0"> 
                         </iframe>
                     </div>
                     <div className='item-title'>
