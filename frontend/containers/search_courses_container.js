@@ -4,7 +4,7 @@ import SearchCourses from '../components/SearchCourses';
 import React from 'react';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger;
+    
     return ({
         courses: Object.keys(state.entities.courses).map( id => state.entities.courses[id]),
     })

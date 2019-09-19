@@ -29,7 +29,6 @@ class EditUser extends React.Component {
     }
 
     renderEditErrors() {
-        debugger;
         return(
             <ul>
                 {this.props.errors.map((error, i) => {

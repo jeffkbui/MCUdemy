@@ -948,7 +948,6 @@ function (_React$Component) {
   }, {
     key: "renderEditErrors",
     value: function renderEditErrors() {
-      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "errors",
@@ -2744,7 +2743,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
-  debugger;
   return {
     courses: Object.keys(state.entities.courses).map(function (id) {
       return state.entities.courses[id];
