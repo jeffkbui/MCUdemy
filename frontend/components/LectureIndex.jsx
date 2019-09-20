@@ -11,6 +11,7 @@ class LectureIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchLectures();
+        window.scrollTo(0, 0)
     }
 
     render() {

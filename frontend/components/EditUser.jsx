@@ -14,6 +14,10 @@ class EditUser extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     update(field) {
         return event => this.setState({
             [field]: event.target.value
@@ -68,7 +72,7 @@ class EditUser extends React.Component {
                                     <br/>
                                     {this.state.buttonClicked&&this.renderEditErrors()}
 
-                                    <div class='form-first-name'>
+                                    <div className='form-first-name'>
                                         First Name
                                     </div>
 
@@ -77,7 +81,7 @@ class EditUser extends React.Component {
                                     </div>
                                     <br/>
 
-                                    <div class='form-last-name'>
+                                    <div className='form-last-name'>
                                         Last Name
                                     </div>
 
@@ -86,7 +90,7 @@ class EditUser extends React.Component {
                                     </div>
                                     <br/>
 
-                                    <div class='form-email'>
+                                    <div className='form-email'>
                                         Email
                                     </div>
 
@@ -95,7 +99,7 @@ class EditUser extends React.Component {
                                     </div>
                                     <br/> 
 
-                                    <div class='form-password'>
+                                    <div className='form-password'>
                                         New Password (optional)
                                     </div>
 

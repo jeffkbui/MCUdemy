@@ -301,7 +301,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Announcements = function Announcements() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Announcements");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "announcements-main-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "announcements-title"
+  }, "You're invited: MCUdemy Conference"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "bridge",
+    src: "https://www.queenanne.com/resourcefiles/mainimages/golden-gate-bridge-at-san-francisco-top.jpg",
+    alt: "gg-bridge"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "announcements-body"
+  }, "Join us in San Francisco for our 2nd annual instructor conference, MCUdemy LIVE. Whether you\u2019re creating a course, already published, or are a seasoned instructor, this is your #1 opportunity to learn from top instructors on the platform and gain the insights and strategies you need to succeed on MCUdemy and beyond. Don\u2019t take our word for it - hear what your fellow instructors have to say about the conference."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "announcements-body"
+  }, "Register by May 31 for Limited-Time pricing of $199 plus get automatically entered into a raffle to win a free stay at the Palace Hotel. The Palace Hotel, established in 1875, is a true San Francisco icon. Enjoy original architecture combined with classically inspired decor. Stay in luxury and comfort during MCUdemy LIVE! Ready to register? Or just want more information? Go here. Your MCUdemy LIVE ticket includes all keynotes, breakouts and workshops, meals, drinks, and entertainment, from Friday evening through midday Sunday."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Announcements);
@@ -649,6 +661,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchCourse(this.props.match.params.courseId);
+      window.scrollTo(0, 0);
     }
   }, {
     key: "componentDidUpdate",
@@ -787,25 +800,26 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-fixed-info"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "video-preview",
-        onClick: function onClick() {
-          return _this.props.openModal('video');
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "play-button-circle"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "play-button",
-        src: "https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png",
-        alt: ""
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-preview"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        id: "ytplayer",
+        type: "text/html",
+        width: "355",
+        height: "215",
+        src: this.props.course.youtube_code,
+        frameBorder: "0"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-price"
       }, "$", this.props.course.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-buttons"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "add-to-cart"
       }, "Add to cart"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "buy-now"
-      }, "Buy now")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "buy-now",
+        onClick: function onClick() {
+          return _this.props.openModal('video');
+        }
+      }, "Preview Course")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "money-back"
       }, "30-Day Money-Back Guarentee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-includes"
@@ -930,6 +944,11 @@ function (_React$Component) {
   }
 
   _createClass(EditUser, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "update",
     value: function update(field) {
       var _this2 = this;
@@ -989,7 +1008,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "edit-form-header"
       }, "Edit profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.state.buttonClicked && this.renderEditErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "form-first-name"
+        className: "form-first-name"
       }, "First Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -998,7 +1017,7 @@ function (_React$Component) {
         value: this.state.first_name,
         onChange: this.update('first_name')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "form-last-name"
+        className: "form-last-name"
       }, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1007,7 +1026,7 @@ function (_React$Component) {
         value: this.state.last_name,
         onChange: this.update('last_name')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "form-email"
+        className: "form-email"
       }, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1016,7 +1035,7 @@ function (_React$Component) {
         value: this.state.email,
         onChange: this.update('email')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "form-password"
+        className: "form-password"
       }, "New Password (optional)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1181,6 +1200,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchLectures();
+      window.scrollTo(0, 0);
     }
   }, {
     key: "render",
@@ -1442,7 +1462,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(LectureShow).call(this, props));
     _this.state = {
-      component: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CourseContent__WEBPACK_IMPORTED_MODULE_2__["default"], null)
+      component: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Overview__WEBPACK_IMPORTED_MODULE_3__["default"], null)
     };
     return _this;
   }
@@ -1451,6 +1471,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchLecture(this.props.match.params.lectureId);
+      window.scrollTo(0, 0);
     }
   }, {
     key: "componentDidUpdate",
@@ -1645,7 +1666,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Overview = function Overview() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "About this course"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Learn about the MCU timeline"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "By the numbers"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Instructor"));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-main-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-main-title"
+  }, "About this course"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-description"
+  }, "Learn to recognize key events in the MCU timeline"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-body"
+  }, "By the numbers"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Skill level: Beginner Level"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Students: 9986"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Languages: English"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Captions: Yes")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Lectures: 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Video: 30 mins"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-body"
+  }, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-body2"
+  }, "This course goes over the 'phase four' timeline of the Marvel Cinematic Universe. Here we will go over character story arcs, timeline of significant events, and who, what, when, where, and why! On a side note, we\u2019re always looking ahead to the next big things happening in the Marvel Cinematic Universe, but until recently, it was pretty challenging! Spider-Man: Far From Home marked the end of the third phase of Marvel movies and we couldn\u2019t be more excited about Phase Four. We\u2019ll share all the news we know about this period of media as well as what to expect beyond it. Of course, we\u2019ll see some of our favorite heroes returning to the big screen, such as Black Widow and Thor. We\u2019ll talk about why Jane Foster is back for Love and Thunder and whether it takes place before or after Guardians of the Galaxy Vol. 3.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-body"
+  }, "Instructor"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-normal-text-body3"
+  }, "CBR")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Overview);
@@ -1668,7 +1715,9 @@ __webpack_require__.r(__webpack_exports__);
 var QA = function QA() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "qa-text"
-  }, "For questions or concerns please contact instructorsupport@mcudemy.com");
+  }, "For questions or concerns please contact", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "contact-us-email"
+  }, "instructorsupport@mcudemy.com"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (QA);
@@ -1757,6 +1806,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchCourses();
+      window.scrollTo(0, 0);
     }
   }, {
     key: "render",
@@ -2222,151 +2272,191 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Modal */ "./frontend/components/Modal.jsx");
 /* harmony import */ var _containers_course_index_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/course_index_container */ "./frontend/containers/course_index_container.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
 
 
 
-var Splash = function Splash(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "main-splash-page"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header-logo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/",
-    className: "logo"
-  }, "MCU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/",
-    className: "header-logo"
-  }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header-categories"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "categories-icon",
-    src: "https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png",
-    alt: "categories"
-  }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: "header-search-bar",
-    onSubmit: function onSubmit() {
-      return props.history.push('/api/search-courses');
+
+var Splash =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Splash, _React$Component);
+
+  function Splash(props) {
+    _classCallCheck(this, Splash);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Splash).call(this, props));
+  }
+
+  _createClass(Splash, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "search-input",
-    type: "text",
-    placeholder: "Search for anything"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "search-submit",
-    type: "submit"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "magnifying-icon",
-    src: "https://image.flaticon.com/icons/png/512/63/63322.png",
-    alt: ""
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "profiles-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "linkedin",
-    href: "https://www.linkedin.com/in/jeffreykbui/"
-  }, "LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "github",
-    href: "https://github.com/jeffkbui/MCUdemy/wiki"
-  }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "cart-icon",
-    src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
-    alt: "cart"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "cart"
-  }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header-text1"
-  }, "Program your future"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header-text2"
-  }, "Study any topic, anytime. Choose from thousands of", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "expert-led courses now.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-box"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "mouse-icon",
-    src: "https://static.thenounproject.com/png/1179449-200.png",
-    alt: "mouseclick"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-textbox"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-text"
-  }, "100,000 online courses"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-text2"
-  }, "Explore a variety of fresh topics"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-box"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "checkbox-icon",
-    src: "https://cdn3.iconfinder.com/data/icons/chat-and-speech-bubble/480/chat_speech_bubble_communication_interaction_-_39-512.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-textbox"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-text"
-  }, "Expert instruction"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-text2"
-  }, "Find the right instructor for you"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-box2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "clock-icon",
-    src: "https://cdn3.iconfinder.com/data/icons/photo-video-editor-set-2/48/History-512.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-textbox2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-text"
-  }, "Lifetime access"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash2-text2"
-  }, "Learn on your schedule"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "main-course-index"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_course_index_container__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash-footer-main"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "course-show-footer-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "footer-text"
-  }, "Top companies choose MCUdemy to build in-demand Marvel skills."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "footer-images"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "footer-company-image",
-    src: "https://i.udemycdn.com/partner-logos/lyft-logo.svg",
-    alt: "lyft"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "footer-company-image",
-    src: "https://i.udemycdn.com/partner-logos/pinterest-logo.svg",
-    alt: "pinterest"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "footer-company-image",
-    src: "https://i.udemycdn.com/partner-logos/adidas-logo.svg",
-    alt: "adidas"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "footer-company-image",
-    src: "https://i.udemycdn.com/partner-logos/eventbrite-logo.svg",
-    alt: "event"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "footer-company-image",
-    src: "https://i.udemycdn.com/partner-logos/surveymonkey-logo.svg",
-    alt: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "footer-company-image",
-    src: "https://i.udemycdn.com/partner-logos/booking-logo.svg",
-    alt: "booking"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "course-show-footer-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header-logo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/",
-    className: "logo2"
-  }, "MCU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/",
-    className: "header-logo"
-  }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "copyright"
-  }, "Copyright 2019 MCUdemy, Inc."))));
-};
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "main-splash-page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+        className: "header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-logo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/",
+        className: "logo"
+      }, "MCU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/",
+        className: "header-logo"
+      }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-categories"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "categories-icon",
+        src: "https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png",
+        alt: "categories"
+      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "header-search-bar",
+        onSubmit: function onSubmit() {
+          return props.history.push('/api/search-courses');
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "search-input",
+        type: "text",
+        placeholder: "Search for anything"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "search-submit",
+        type: "submit"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "magnifying-icon",
+        src: "https://image.flaticon.com/icons/png/512/63/63322.png",
+        alt: ""
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "profiles-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "linkedin",
+        href: "https://www.linkedin.com/in/jeffreykbui/"
+      }, "LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "github",
+        href: "https://github.com/jeffkbui/MCUdemy/wiki"
+      }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "cart-icon",
+        src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
+        alt: "cart"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cart"
+      }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-text1"
+      }, "Program your future"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-text2"
+      }, "Study any topic, anytime. Choose from thousands of", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "expert-led courses now.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "mouse-icon",
+        src: "https://static.thenounproject.com/png/1179449-200.png",
+        alt: "mouseclick"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-textbox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-text"
+      }, "100,000 online courses"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-text2"
+      }, "Explore a variety of fresh topics"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "checkbox-icon",
+        src: "https://cdn3.iconfinder.com/data/icons/chat-and-speech-bubble/480/chat_speech_bubble_communication_interaction_-_39-512.png"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-textbox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-text"
+      }, "Expert instruction"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-text2"
+      }, "Find the right instructor for you"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-box2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "clock-icon",
+        src: "https://cdn3.iconfinder.com/data/icons/photo-video-editor-set-2/48/History-512.png"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-textbox2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-text"
+      }, "Lifetime access"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash2-text2"
+      }, "Learn on your schedule"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "main-course-index"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_course_index_container__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash-footer-main"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-show-footer-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footer-text"
+      }, "Top companies choose MCUdemy to build in-demand Marvel skills."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footer-images"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/lyft-logo.svg",
+        alt: "lyft"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/pinterest-logo.svg",
+        alt: "pinterest"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/adidas-logo.svg",
+        alt: "adidas"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/eventbrite-logo.svg",
+        alt: "event"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/surveymonkey-logo.svg",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "footer-company-image",
+        src: "https://i.udemycdn.com/partner-logos/booking-logo.svg",
+        alt: "booking"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-show-footer-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-logo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/",
+        className: "logo2"
+      }, "MCU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/",
+        className: "header-logo"
+      }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "copyright"
+      }, "Copyright 2019 MCUdemy, Inc."))));
+    }
+  }]);
+
+  return Splash;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
 

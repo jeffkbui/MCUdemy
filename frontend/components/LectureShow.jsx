@@ -9,11 +9,12 @@ import Announcements from './Announcements';
 class LectureShow extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {component: (<CourseContent />)}
+        this.state = {component: (<Overview />)}
     }
 
     componentDidMount() {
         this.props.fetchLecture(this.props.match.params.lectureId)
+        window.scrollTo(0, 0)
     }
 
     componentDidUpdate(prevProps) {

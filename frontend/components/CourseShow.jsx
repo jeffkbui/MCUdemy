@@ -10,6 +10,7 @@ class CourseShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchCourse(this.props.match.params.courseId)
+        window.scrollTo(0, 0);
     }
 
     componentDidUpdate(prevProps) {
@@ -130,10 +131,18 @@ class CourseShow extends React.Component {
                             height: ($('body').height() - 400)
                         }}>
                         <div className='course-fixed-info'>
-                            <button className='video-preview' onClick={() => this.props.openModal('video')}>
-                                <div className='play-button-circle'>
+                            <button className='video-preview'>
+                                {/* <div className='play-button-circle'>
                                     <img className='play-button' src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png" alt=""/>
-                                </div>
+                                </div> */}
+                                <iframe 
+                                    id="ytplayer" 
+                                    type="text/html" 
+                                    width="355"
+                                    height="215" 
+                                    src={this.props.course.youtube_code}
+                                    frameBorder="0"> 
+                                </iframe>
                             </button>
                             <div className='course-price'>
                                 ${this.props.course.price}
@@ -142,8 +151,8 @@ class CourseShow extends React.Component {
                                 <div className='add-to-cart'>
                                     Add to cart
                                 </div>
-                                <div className='buy-now'>
-                                    Buy now
+                                <div className='buy-now' onClick={() => this.props.openModal('video')}>
+                                    Preview Course
                                 </div>
                             </div>
                             <div className='money-back'>

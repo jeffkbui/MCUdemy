@@ -10,6 +10,7 @@ class SearchCourses extends React.Component {
 
     componentDidMount() {
         this.props.fetchCourses();
+        window.scrollTo(0, 0)
     }
 
     render() {
