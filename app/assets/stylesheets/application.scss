@@ -1309,5 +1309,245 @@
    background-color: #dedfe0;
 }
 
+.search-main-container {
+   margin-top: 35px;
+   display: flex;
+   flex-direction: row;
+}
+
+.not-sure-container {
+   border: 1px solid #e8e9eb;
+   border-radius: 2px;
+   padding: 16px;
+   color: #29303b;
+   height: 100px;
+   width: 212px;
+   font-family: 'open_sansregular';
+   margin-left: 40px;
+}
+
+.not-sure {
+   font-size: 16px;
+   font-weight: 900;
+   margin-left: 35px;
+}
+
+.every-course {
+   font-size: 13px;
+   margin-left: 35px;
+   margin-top: 10px;
+}
+
+.thirtyday {
+   font-size: 13px;
+   font-weight: 900;
+   margin-left: 35px;
+   color: black; 
+   margin-top: 4px; 
+}
+
+.search-courses-main {
+   margin-left: 70px;
+   width: 850px;
+   border-top: 2px solid lightgray;
+}
+
+.search-courses-title {
+   display: flex;
+   align-items: center;
+   margin-top: 2px;
+   background: #f7f8fa;
+   height: 146px;
+   color: #29303b;
+   font-family: 'open_sansregular';
+   box-shadow: 0px -3px 10px -9px black;
+}
+
+.search-results {
+   font-size: 20px;
+   margin-left: 50px;
+}
+
+.search-item-main-container {
+   width: 850px;
+   height: 170px;
+   border-bottom: 1px solid lightgray;
+   font-family: 'open_sansregular';
+}
+
+.search-item-body {
+   display: flex;
+   flex-direction: row;
+   margin-top: 20px;
+   margin-left: 5px;
+   height: 122px;
+   width: 95%;
+}
+
+.search-item-text-container {
+   margin-left: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 415px;
+}
+
+.search-item-title {
+   font-size: 15px;
+   color: #29303b;
+   font-weight: 900;
+}
+
+.search-item-logistics {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   font-size: 12px;
+   color: #686f7a;
+   width: 300px;
+}
+
+.search-item-description {
+   font-size: 12px;
+   color: #686f7a;
+}
+
+.search-item-numbers {
+   display: flex;
+   flex-direction: column;
+   margin-left: 15px;
+}
+
+.search-item-price {
+   margin-left: 60px;
+   margin-bottom: 30px;
+   font-size: 18px;
+   color: #29303b;
+}
+
+.search-item-rating {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 13px;
+   color: #686f7a;
+   margin-left: 31px;
+   width: 85px;
+}
+
+.search-item-reviews {
+   font-size: 13px;
+   color: #686f7a;
+   margin-left: 41px;
+}
+
+.profile-main-container {
+   display: flex;
+   flex-direction: row;
+}
+
+.side-header {
+   display: flex;
+   justify-content: center;
+   width: 60px;
+   background-color: #52143e;
+}
+
+.edit-user-right-side-container {
+   display: flex;
+   flex-direction: column;
+}
+
+.edit-user-greeting {
+   display: flex;
+   flex-direction: row-reverse;
+   margin-top: 10px;
+   width: 94vw;
+}
+
+.edit-user-form {
+   margin-left: 75px;
+   margin-bottom: 28px;
+   width: 45%;
+   font-family: 'open_sansregular';
+}
+
+.edit-form-header {
+   font-size: 32px;
+   color: #29303b;
+   font-weight: 900;
+}
+
+.form-first-name {
+   margin-bottom: 5px;
+}
+
+.form-last-name {
+   margin-bottom: 5px;
+}
+
+.form-password {
+   margin-bottom: 5px;
+}
+
+.form-email {
+   margin-bottom: 5px;
+}
+
+.edit-user-form-credentials {
+   font-family: 'open_sansregular';
+   font-size: 16px;
+   border: none;
+   outline: none;
+}
+
+.edit-user-credentials-submit {
+   background-color: #ec5252;
+   color: white;
+   font-family: 'open_sansregular';
+   height: 45px;
+   width: 60px;
+   border-radius: 2px;
+   border: none;
+   font-size: 15px;
+   outline: none;
+}
+
+.save-edit-user-container {
+   display: flex;
+   flex-direction: row-reverse;
+}
+
+.qa-text {
+   font-family: 'open_sansregular';
+   color: #29303b;
+   font-size: 15px;
+   margin: 20px;
+   text-align: center;
+   height: 400px;
+}
+
+.course-content-main-container {
+   height: 400px;
+}
+
+.bookmarks-main-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.no-bookmarks-title {
+   font-size: 20px;
+   font-family: 'open_sansregular';
+   color: #29303b;
+   font-weight: 900;
+}
+
+.bookmarks-body {
+   font-size: 15px;
+   font-family: 'open_sansregular';
+   color: #29303b;
+}
 
 

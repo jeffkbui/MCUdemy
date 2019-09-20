@@ -29,7 +29,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                             </div>
                             <div className='account-info-container'>
                                 <div className='full-name'>
-                                    {currentUser.first_name}{currentUser.last_name}
+                                    {currentUser.first_name} {currentUser.last_name}
                                 </div>
                                 <div className='email'>
                                     {currentUser.email}

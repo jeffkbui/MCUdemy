@@ -383,7 +383,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Bookmarks = function Bookmarks() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Bookmarks");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bookmarks-main-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "no-bookmarks-title"
+  }, "No bookmarks created yet"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bookmarks-body"
+  }, "Add bookmarks while watching lectures to save moments of a course for later. Bookmarks you've saved will show up here."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Bookmarks);
@@ -405,12 +411,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var CourseContent = function CourseContent() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "course-content-main-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "course-content-component"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "course-content-component-sections"
   }, "Section 1: The full course"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "course-content-component-info"
-  }, "1 / 1 | 30min"));
+  }, "1 / 1 | 30min")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CourseContent);
@@ -958,8 +966,10 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-        className: "header"
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "profile-main-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+        className: "side-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-logo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -968,78 +978,59 @@ function (_React$Component) {
       }, "MCU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/",
         className: "header-logo"
-      }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header-categories"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "categories-icon",
-        src: "https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png",
-        alt: "categories"
-      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "header-search-bar"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "search-input",
-        type: "text",
-        placeholder: "Search for anything"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "search-submit",
-        type: "submit"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "magnifying-icon",
-        src: "https://image.flaticon.com/icons/png/512/63/63322.png",
-        alt: ""
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "profiles-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "linkedin",
-        href: "https://www.linkedin.com/in/jeffreykbui/"
-      }, "LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "github",
-        href: "https://github.com/jeffkbui/MCUdemy/wiki"
-      }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "cart-icon",
-        src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
-        alt: "cart"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "cart"
-      }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "edit-user-right-side-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "edit-user-greeting"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "edit-user-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-        className: "form-header"
-      }, "Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "line"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.state.buttonClicked && this.renderEditErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "edit-form-header"
+      }, "Edit profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.state.buttonClicked && this.renderEditErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "form-first-name"
+      }, "First Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "form-credentials",
+        className: "edit-user-form-credentials",
         type: "text",
         value: this.state.first_name,
         onChange: this.update('first_name')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "form-last-name"
+      }, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "form-credentials",
+        className: "edit-user-form-credentials",
         type: "text",
         value: this.state.last_name,
         onChange: this.update('last_name')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "form-email"
+      }, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "form-credentials",
+        className: "edit-user-form-credentials",
         type: "text",
         value: this.state.email,
         onChange: this.update('email')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "form-password"
+      }, "New Password (optional)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "form-credentials",
+        className: "edit-user-form-credentials",
         type: "password",
         placeholder: "Password",
         onChange: this.update('password')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "credentials-submit",
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "save-edit-user-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "edit-user-credentials-submit",
         type: "submit",
-        value: "Update Info"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        value: "Save"
+      }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-show-footer-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-logo"
@@ -1118,7 +1109,7 @@ var Greeting = function Greeting(_ref) {
       className: "account-info-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "full-name"
-    }, currentUser.first_name, currentUser.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, currentUser.first_name, " ", currentUser.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "email"
     }, currentUser.email))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/api/users/".concat(currentUser.id, "/edit"),
@@ -1370,8 +1361,13 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "my-courses-course",
         onClick: this.handleRedirect
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "my-courses-thumbnail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        id: "ytplayer",
+        type: "text/html",
+        width: "231",
+        height: "122",
+        src: "https://www.youtube.com/embed/hFRDkSR2OEo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0",
+        frameBorder: "0"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "my-courses-title"
       }, this.props.lecture.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1462,16 +1458,7 @@ function (_React$Component) {
       if (prevProps.lecture.id != this.props.match.params.lectureId) {
         this.props.fetchLecture(this.props.match.params.lectureId);
       }
-    } // handleContentChange(type) {
-    //     if (type === 'course-content') {
-    //         this.setState({component: (<CourseContent />)})
-    //     } else if (type === 'overview') {
-    //         this.setState({component: (<Overview />)})
-    //     } else if (type === '{
-    //         return (<div>others</div>)
-    //     }
-    // }
-
+    }
   }, {
     key: "render",
     value: function render() {
@@ -1679,7 +1666,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var QA = function QA() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "QA");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "qa-text"
+  }, "For questions or concerns please contact instructorsupport@mcudemy.com");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (QA);
@@ -1774,7 +1763,6 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      // return (<div>test</div>)
       var courses = this.props.courses.map(function (course) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchCoursesItems__WEBPACK_IMPORTED_MODULE_1__["default"], {
           key: course.id,
@@ -1828,9 +1816,23 @@ function (_React$Component) {
         alt: "cart"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cart"
-      }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Search results"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "course-index-main"
+      }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-courses-title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-results"
+      }, "Results")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-main-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-courses-main"
       }, courses), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "not-sure-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "not-sure"
+      }, "Not sure?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "every-course"
+      }, "Every course comes with a"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "thirtyday"
+      }, "30-day money-back-guarantee"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "splash-footer-main"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-show-footer-1"
@@ -1945,32 +1947,37 @@ function (_React$Component) {
         to: "/api/courses/".concat(this.props.course.id),
         className: "course-item-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "course-item-main",
-        onClick: this.handleRedirect
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        className: "search-item-main-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-item-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
         id: "ytplayer",
         type: "text/html",
         width: "231",
         height: "122",
         src: this.props.course.youtube_code,
         frameBorder: "0"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "item-title"
-      }, this.props.course.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "item-index-text-container"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-item-text-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "item-instructor"
-      }, this.props.course.instructor), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "item-ratings-1"
+        className: "search-item-title"
+      }, this.props.course.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-item-logistics"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Highest Rated"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.course.num_videos, " lecture"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.course.duration, " minutes"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "All Levels")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-item-description"
+      }, this.props.course.description, " | By ", this.props.course.instructor)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-item-numbers"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-item-price"
+      }, "$", this.props.course.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-item-rating"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "star-rating",
         src: "https://alarm-reviews.net/wp-content/themes/goodnex/inc/images/4.5.svg",
         alt: "ratings"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "item-ratings-2"
-      }, "4.5"), "(", this.props.course.num_reviews, ")"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "item-price"
-      }, "$", this.props.course.price)))));
+      }), "4.5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-item-reviews"
+      }, "(", this.props.course.num_reviews, " ratings)"))))));
     }
   }]);
 

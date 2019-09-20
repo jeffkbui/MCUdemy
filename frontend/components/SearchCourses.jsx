@@ -13,7 +13,6 @@ class SearchCourses extends React.Component {
     }
 
     render() {
-        // return (<div>test</div>)
         const courses = this.props.courses.map(course => {
             return (
                 <SearchCoursesItems key={course.id} course={course} ownProps={this.props}/>
@@ -50,13 +49,28 @@ class SearchCourses extends React.Component {
                     <GreetingContainer></GreetingContainer>
                 </header> 
 
-                <div>
-                    Search results
+                <div className='search-courses-title'>
+                    <div className='search-results'>Results</div>
                 </div>
 
-                 <div className='course-index-main'>
-                    {courses}
+                <div className='search-main-container'>
+                    <div className='search-courses-main'>
+                        {courses}
+                    </div>
+                    <div className='not-sure-container'>
+                        <div className='not-sure'>
+                            Not sure?
+                        </div>
+                        <div className='every-course'>
+                            Every course comes with a
+                        </div>
+                        <div className='thirtyday'>
+                            30-day money-back-guarantee
+                        </div>
+                    </div>
                 </div>
+
+                 
 
                 <div className='splash-footer-main'>
                     <div className='course-show-footer-1'>

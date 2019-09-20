@@ -22,16 +22,6 @@ class LectureShow extends React.Component {
         }
     }
 
-    // handleContentChange(type) {
-    //     if (type === 'course-content') {
-    //         this.setState({component: (<CourseContent />)})
-    //     } else if (type === 'overview') {
-    //         this.setState({component: (<Overview />)})
-    //     } else if (type === '{
-    //         return (<div>others</div>)
-    //     }
-    // }
-
     render() {
         return (
             <div>
