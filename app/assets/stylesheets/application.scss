@@ -353,6 +353,11 @@
    font-size: 14px;
 }
 
+.header-categories:hover {
+   cursor:pointer;
+   color: black;
+}
+
 .header-search-bar {
    display: flex;
    flex-direction: row;

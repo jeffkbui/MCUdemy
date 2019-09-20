@@ -2315,6 +2315,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "main-splash-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
@@ -2336,7 +2338,7 @@ function (_React$Component) {
       }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "header-search-bar",
         onSubmit: function onSubmit() {
-          return props.history.push('/api/search-courses');
+          return _this.props.history.push('/api/search-courses');
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "search-input",

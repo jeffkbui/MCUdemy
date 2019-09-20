@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# seed reset
+User.destroy_all
+Lecture.destroy_all
+Course.destroy_all
 
 # Users
 User.create!(first_name: 'Jeffrey', last_name: 'Bui', email: 'jeffreykbui@gmail.com', password: '123456')
@@ -14,11 +18,10 @@ User.create!(first_name: 'Francis', last_name: 'Anand', email: 'fanand@gmail.com
 User.create!(first_name: 'Meeko', last_name: 'Rayo', email: 'meeko@gmail.com', password: '123456')
 User.create!(first_name: 'Tony', last_name: 'Stark', email: 'tony.stark@starkindustries.com', password: 'iloveironman')
 
-#Lecture
+# Lecture
 Lecture.create!(title: "The Official MCU Timeline Explained")
 
 # Courses
-
 Course.create!(
     title: "Odin Makes: Stormbreaker", 
     description: "I make Thor’s new axe Stormbreaker from Avengers: Infinity War. I made this prop before I saw the movie, I only had pictures of the toys to work from!", 

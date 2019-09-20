@@ -6,7 +6,7 @@ import CourseIndexContainer from '../containers/course_index_container';
 
 class Splash extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     componentDidMount() {
@@ -28,7 +28,7 @@ class Splash extends React.Component {
                         <img className='categories-icon' src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="categories"/>
                         Categories
                     </div>
-                    <form className='header-search-bar' onSubmit={() => props.history.push('/api/search-courses')}>
+                    <form className='header-search-bar' onSubmit={() => this.props.history.push('/api/search-courses')}>
                         <input className='search-input' type="text" placeholder='Search for anything'/>
                         <div>
                             <button className='search-submit' type="submit">
