@@ -155,7 +155,7 @@ Course.create!(
     num_students: 234,
     num_reviews: 56,
     who_this_course_is_for: ["Spidey fans!", "People who love arts and crafts", "Those who want to become Spider-Man"],
-    youtube_code: "https://www.youtube.com/embed/GCfG9QAPrWY?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/GCfG9QAPrWY?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -172,7 +172,7 @@ Course.create!(
     num_students: 10655,
     num_reviews: 8599,
     who_this_course_is_for: ["MCU fans", "Critical thinkers", "Ultron fanatics", "Theorists", "Philosophy majors"],
-    youtube_code: "https://www.youtube.com/embed/ss0DFSHKnNo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/ss0DFSHKnNo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -189,7 +189,7 @@ Course.create!(
     num_students: 3,
     num_reviews: 2,
     who_this_course_is_for: ["MCU fans", "Critical thinkers", "Thanos fanatics", "Theorists", "Philosophy majors"],
-    youtube_code: "https://www.youtube.com/embed/5Wac2WKycZw?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/5Wac2WKycZw?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -206,7 +206,7 @@ Course.create!(
     num_students: 878,
     num_reviews: 322,
     who_this_course_is_for: ["MCU fans", "Infinity Gauntlet enthusiasts", "Thanos fans", "Those interested in learning more about Marvel history"],
-    youtube_code: "https://www.youtube.com/embed/_oOiiqlfj60?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/_oOiiqlfj60?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -223,7 +223,7 @@ Course.create!(
     num_students: 10233,
     num_reviews: 1988,
     who_this_course_is_for: ["MCU fans", "Infinity Gauntlet enthusiasts", "Thanos fans", "Those interested in learning more about Marvel history"],
-    youtube_code: "https://www.youtube.com/embed/1DrUoX6WZuc?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/1DrUoX6WZuc?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -240,7 +240,7 @@ Course.create!(
     num_students: 874,
     num_reviews: 212,
     who_this_course_is_for: ["MCU fans", "Iron Man fans", "Those interested in learning more about Marvel history", "Those interested in becoming someone like Tony Stark", "Iron Man lovers"],
-    youtube_code: "https://www.youtube.com/embed/MUeTA0WwKsI?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/MUeTA0WwKsI?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -257,7 +257,7 @@ Course.create!(
     num_students: 1151,
     num_reviews: 132,
     who_this_course_is_for: ["People interested in working out", "Those who had no prior injuries and are ready to exercise", "Anyone looking to be a super hero", "Anyone interested in looking like Chris Evans"],
-    youtube_code: "https://www.youtube.com/embed/JQx1_YDYiB0?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/JQx1_YDYiB0?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -274,7 +274,7 @@ Course.create!(
     num_students: 699,
     num_reviews: 409,
     who_this_course_is_for: ["Hulk fans", "Critical thinkers", "This course is for people interested in the theoretical side of the MCU" ,"Psychology majors", "MCU fans", "People who want the Hulk to become The Maestro"],
-    youtube_code: "https://www.youtube.com/embed/AUlR6EtGsxQ?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+    youtube_code: "https://www.youtube.com/embed/AUlR6EtGsxQ?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 
