@@ -20,14 +20,14 @@
 // open_sans_semiboldregular
 // open_sansregular
 @font-face {
-   font-family: 'open_sans_lightregular';
-   src: url('./udemy-font-1.ttf');
-   font-family: 'open_sansbold';
-   src: url('./udemy-font-2.ttf');
-   font-family: 'open_sans_semiboldregular';
-   src: url('./udemy-font-3.ttf');
+   // font-family: 'open_sans_lightregular';
+   // src: url('./udemy-font-1.ttf');
+   // font-family: 'open_sansbold';
+   // src: url('./udemy-font-2.ttf');
+   // font-family: 'open_sans_semiboldregular';
+   // src: url('./udemy-font-3.ttf');
    font-family: 'open_sansregular';
-   src: url('./udemy-font-4.ttf');
+   src: font-url('udemy-font-4.ttf');
 }
 
 * {

@@ -18,22 +18,6 @@ User.create!(first_name: 'Tony', last_name: 'Stark', email: 'tony.stark@starkind
 Lecture.create!(title: "The Official MCU Timeline Explained")
 
 # Courses
-Course.create!(
-    title: "Odin Makes: Thor's Hammer", 
-    description: "I make Thor’s hammer Mjolnir, from Marvel’s movie Thor: Ragnarok! (well, Thor: Dark World really)", 
-    instructor: "Odin Makes",
-    price: 19.99, 
-    duration: 12, 
-    what_youll_learn: ["How to use yoga blocks in crafting", "Using cement", "5 minute Epoxy", "How to spray paint", "How to use leather", "Styling with Acrylic paints"], 
-    requirements: ["Must be 18 years or older OR accompanied by an adult", "Gather all of the materials", "A passion for crafts and Marvel"],
-    course_description: "Odin Abbott is a host with DIY Prop Shop, and Odin Makes continues the desire to show how to make items for yourself.",
-    num_lectures: 1,
-    num_videos: 1,
-    num_students: 1745,
-    num_reviews: 25,
-    who_this_course_is_for: ["This course is for people who have a passion for arts and crafts", "Opened to adults and children of all ages!", "Anybody who loves Marvel and/or Thor"],
-    youtube_code: "https://www.youtube.com/embed/JRjI-dvK_eo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
-)
 
 Course.create!(
     title: "Odin Makes: Stormbreaker", 
@@ -50,23 +34,6 @@ Course.create!(
     num_reviews: 145,
     who_this_course_is_for: ["This course is for people who have a passion for arts and crafts", "Opened to adults and children of all ages!", "Anybody who loves Marvel and/or Thor"],
     youtube_code: "https://www.youtube.com/embed/TZb2wxlUwVM?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
-)
-
-Course.create!(
-    title: "How to make Captain America's Shield", 
-    description: "Learn how to make your very own Captain America Shield from the popular Marvel film.", 
-    instructor: "AlumniTube",
-    price: 21.99, 
-    duration: 14, 
-    what_youll_learn: ["How to construct and craft using heavy metals","Learn how to weld your own metals","How to use a powersaw","Learn styling mechanics with different painting techniques"], 
-    requirements: ["Recommends adult supervision with children under 18 years old","Have access to welding station","Have general knowledge of crafts and construction"],
-    course_description: "Hi, AlumniTube here! I'm a Marvel superfan and love the idea of crafting Marvel's famous products. I have many years of experience in building and constructing, so I used that experience to create these fun products. This course will go over the full process of how I built my Captain America Shield from scratch. Please enjoy!",
-    num_lectures: 1,
-    num_videos: 1,
-    num_students: 5445,
-    num_reviews: 210,
-    who_this_course_is_for: ["Anyone who loves to create fun things", "Marvel fans", "People with experience in crafting with heavy metals"],
-    youtube_code: "https://www.youtube.com/embed/vvbRX1WKbiE?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(
@@ -118,6 +85,40 @@ Course.create!(
     num_reviews: 2,
     who_this_course_is_for: ["People with experience in electronics", "Crafty people", "Those who have the time to commit to building the suit", "Experience with using powertools", "Iron Man/Marvel fans"],
     youtube_code: "https://www.youtube.com/embed/8dy9tAhweeU?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
+Course.create!(
+    title: "How to make Captain America's Shield", 
+    description: "Learn how to make your very own Captain America Shield from the popular Marvel film.", 
+    instructor: "AlumniTube",
+    price: 21.99, 
+    duration: 14, 
+    what_youll_learn: ["How to construct and craft using heavy metals","Learn how to weld your own metals","How to use a powersaw","Learn styling mechanics with different painting techniques"], 
+    requirements: ["Recommends adult supervision with children under 18 years old","Have access to welding station","Have general knowledge of crafts and construction"],
+    course_description: "Hi, AlumniTube here! I'm a Marvel superfan and love the idea of crafting Marvel's famous products. I have many years of experience in building and constructing, so I used that experience to create these fun products. This course will go over the full process of how I built my Captain America Shield from scratch. Please enjoy!",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 5445,
+    num_reviews: 210,
+    who_this_course_is_for: ["Anyone who loves to create fun things", "Marvel fans", "People with experience in crafting with heavy metals"],
+    youtube_code: "https://www.youtube.com/embed/vvbRX1WKbiE?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
+Course.create!(
+    title: "Odin Makes: Thor's Hammer", 
+    description: "I make Thor’s hammer Mjolnir, from Marvel’s movie Thor: Ragnarok! (well, Thor: Dark World really)", 
+    instructor: "Odin Makes",
+    price: 19.99, 
+    duration: 12, 
+    what_youll_learn: ["How to use yoga blocks in crafting", "Using cement", "5 minute Epoxy", "How to spray paint", "How to use leather", "Styling with Acrylic paints"], 
+    requirements: ["Must be 18 years or older OR accompanied by an adult", "Gather all of the materials", "A passion for crafts and Marvel"],
+    course_description: "Odin Abbott is a host with DIY Prop Shop, and Odin Makes continues the desire to show how to make items for yourself.",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 1745,
+    num_reviews: 25,
+    who_this_course_is_for: ["This course is for people who have a passion for arts and crafts", "Opened to adults and children of all ages!", "Anybody who loves Marvel and/or Thor"],
+    youtube_code: "https://www.youtube.com/embed/JRjI-dvK_eo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
 Course.create!(

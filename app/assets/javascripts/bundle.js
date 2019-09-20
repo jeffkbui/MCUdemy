@@ -2208,9 +2208,9 @@ function (_React$Component) {
         href: "#",
         onClick: this.props.openLoginModal,
         className: "other-modal"
-      }, "Log In")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Don't want to create an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Log In")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Head to Log In to  Access ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
-        onClick: this.handleDemoUser,
+        onClick: this.props.openLoginModal,
         className: "other-modal"
       }, "Demo User"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-forms-login"
