@@ -25,7 +25,6 @@ class VideoModal extends React.Component {
                     frameBorder="0"> 
                 </iframe>
                 <div className='video-modal-footer'>
-
                 </div>
             </div>
         )

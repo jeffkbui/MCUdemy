@@ -192,4 +192,89 @@ Course.create!(
     youtube_code: "https://www.youtube.com/embed/5Wac2WKycZw?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
+Course.create!(
+    title: "All Infinity Gauntlet Powers", 
+    description: "Learn about all of the powers and effects of the MCU Inifinty Gauntlet worn by Thanos", 
+    instructor: "Parampreet Singh",
+    price: 3.99, 
+    duration: 4, 
+    what_youll_learn: ["Infinity Gauntlet uses", "Infinity Stone powers"], 
+    requirements: ["Have seen Avengers: Infinity War", "Have seen Avengers: Endgame", "Have seen Marvel movies with Infinity Stones", "Knowledge of MCU backstory across multiple movies"],
+    course_description: "This course goes over the key powers of the Infinity Gauntlet worn by Thanos and how each Infinity Stone generates these powers.",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 878,
+    num_reviews: 322,
+    who_this_course_is_for: ["MCU fans", "Infinity Gauntlet enthusiasts", "Thanos fans", "Those interested in learning more about Marvel history"],
+    youtube_code: "https://www.youtube.com/embed/_oOiiqlfj60?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
+Course.create!(
+    title: "Why Tony Snapped So Easily But Hulk Struggled?", 
+    description: "Dive deeper into how Iron Man used the Infinity Gauntlet better than The Hulk", 
+    instructor: "Kroft Talks Marvel",
+    price: 119.99, 
+    duration: 5, 
+    what_youll_learn: ["Iron Man strength", "Hulk strength", "Key differences between our heroes", "How the Infinity Gauntlet affects the body","Infinity Stone Powers"], 
+    requirements: ["Have seen Avengers: Infinity War", "Have seen Avengers: Endgame", "Have seen all Iron Man Movies", "Knowledge of MCU backstory across multiple movies", "3 years of Political Theory or equivalent"],
+    course_description: "One of the questions I had after watching Endgame is that how come Tony snapped the infinity gauntlet fairly easy  compared to Hulk and Thanos. If you remember in Infinity War, once Thanos placed the mind stone in the gauntlet, he had to absorb the power of the stones and we could see the energy of every stone going throught his body. In addition, when he puts the gauntlet on in Endgame, even more energy can be seen g which may do to the fact that this time he wants to destroy the Entire Universe and not just a half of all life. Similar energy release happened when Hulk put the Infinity Gauntlet on his hand. Before snapping, the power of the stones already started to cause damage to his hand and to actually snap Hulk had so much difficulty that he had to hold the gauntlet with his other hand. However, a slightly different thing happens when Tony get’s all the stones. His nano-armor transforms into a gauntlet and assembles the stones into right places. We can still see the energy going through his suit but Tony doesn’t seem to struggle to contain the energy of the stones, instead he snaps fairly easily, after saying that he is Iron Man, which I though was an incredible moment.  So how exactly he was able to snap relatively easily compared to Hulk and Thanos without strugling to handle the energy of the stones? There are 2 possible theories to answer this question. The first one is based on Tony’s intelligence and his suit. If you’ve been paying attention and following every MCU movies, he can notice that everytime Tony encounters some kind of problem with his suit he fixes it in the next movie. For exmaple, when Thor hit him with lightnings in the first avengers film, he then redesigns his suit to be capable of absorbing energy. He also solves the problem of always carrying his suit with him by breaking down the suit in multiple parts that can kinda of fly to him anywhere he goes. He then replaces with with nano particles which is even better.  In Avengers Endgame, before Tony snaps, Thor charges his suit with lightnings on purpose so that he can strike Thanos. In the same way, once all the infinity stones are in place on Tony’s hand, his suit actually absorbs the evergy that is released from the stones. Another important thing to remember is that after gathering all stones from multiple timelines, Tony and other avengers spend undetermined amount of time making the Gauntlet. During that time Tony probably adjusted his suit to be able to absorb the energy of the stones in case he would need it. That’s why he didn’t have to struggle the same way as Hulk or Thanos. There exists a second theory might offer a better explanation. When Thanos added the last infinity stone to the gauntlet he had an intention of whipping out half of all the living creatures in the universe. If you think about how big if the universe in the marvel fantasy world and how many different planets there are populated with life, then it’s clear that Thanos snap required an extreme amount of energy. Same thing with Hulk, bring back everybody that Thanos snaped away need an equaly large amout of energy if not more. For these reasons, Hulk really struggled to snap his fingers. However, Tony’s snap required less energy since his intention was to eliminate Thanos and his army. Much smaller objective that bringing back half of all life in the universe. For that reason he could snap fairly easily. However, despite the suit, using the infinity stones was enough to cause irreversible damage that led to Tony’s death, which was a sad moment and an  anticipated conclusion to his character. To conclude these are possible explanations on how Tony could snap fairly easily compared to Hulk, Let me know in the comments which theory do you think is the most accurate.",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 10233,
+    num_reviews: 1988,
+    who_this_course_is_for: ["MCU fans", "Infinity Gauntlet enthusiasts", "Thanos fans", "Those interested in learning more about Marvel history"],
+    youtube_code: "https://www.youtube.com/embed/1DrUoX6WZuc?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
+Course.create!(
+    title: "The REAL Reason Why Tony Stark is The Only Avenger Thanos FEARS in EndGame", 
+    description: "Shed light on why Iron Man is the main Avenger to defeat the Mad Titan", 
+    instructor: "Dash Star",
+    price: 69.99, 
+    duration: 12, 
+    what_youll_learn: ["Iron Man strength", "Key differences between our heroes", "How the Infinity Gauntlet affects the body","Infinity Stone Powers"], 
+    requirements: ["Have seen Avengers: Infinity War", "Have seen Avengers: Endgame", "Have seen all Iron Man Movies", "Knowledge of MCU backstory across multiple movies"],
+    course_description: "This course goes into how the Mad Titan, Thanos, was able to defeat so many heroes, but feared Iron Man the most. Is there a reason why Tony is the most fearsome? Doesn't the fact that he's a normal human make him seem more insignificant compared to other heroes? You'll figure out the answers to these questions once you finish the course!",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 874,
+    num_reviews: 212,
+    who_this_course_is_for: ["MCU fans", "Iron Man fans", "Those interested in learning more about Marvel history", "Those interested in becoming someone like Tony Stark", "Iron Man lovers"],
+    youtube_code: "https://www.youtube.com/embed/MUeTA0WwKsI?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
+Course.create!(
+    title: "How to get Captain America's body", 
+    description: "Want to look like Captain America?", 
+    instructor: "toptenfamous",
+    price: 59.99, 
+    duration: 6, 
+    what_youll_learn: ["How to achieve that super hero body like Chris Evans", "How to lift", "Basic exercises" ,"Strict diet and eating regimen", "Look and feel like Captain America"], 
+    requirements: ["Must be 18 years or older", "Access to various workout equipments", "Access to a gym", "No serious prior injuries"],
+    course_description: "Want to look and feel like Captain America? Our course goes into how Chris Evans transformed himself to embody America's hero. From his smaller figure to becoming a 'hero', Chris stuck through this strict workout and diet routine to achieve his body. Now, you can do the same! Take this course to transform your body.",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 1151,
+    num_reviews: 132,
+    who_this_course_is_for: ["People interested in working out", "Those who had no prior injuries and are ready to exercise", "Anyone looking to be a super hero", "Anyone interested in looking like Chris Evans"],
+    youtube_code: "https://www.youtube.com/embed/JQx1_YDYiB0?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
+Course.create!(
+    title: "Why We Should Be Worried About The Hulk After Avengers Endgame", 
+    description: "Could The Hulk Turn Into The Maestro After Avengers: Endgame?", 
+    instructor: "CBR",
+    price: 19.99, 
+    duration: 10, 
+    what_youll_learn: ["What could happen to the Hulk after the events in Avengers: Endgame", "Why the Hulk?", "Is this transition probable?", "History of the Hulk and his past relationships", "How the Hulk became the person he is today"], 
+    requirements: ["Have seen The Avengers", "Have seen The Avengers: Age of Ultron", "Have seen The Avengers: Infinity War", "Have seen The Avengers: Endgame", "Basic understanding of MCU history"],
+    course_description: "The Hulk and Bruce Banner are very loveable characters, especially in Avenger: Endgame, where Marvel displays a much gentler and controlled side of The Hulk. But what happened in that film that could change his role in the MCU? This course goes into the theory behind how the Hulk can turn into The Maestro after the events that took place during Endgame. This course dives into the psychology behind this character, and how it can be a perfect fit for The Hulk to transform into something completely different. Take this course to learn more! ",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 699,
+    num_reviews: 409,
+    who_this_course_is_for: ["Hulk fans", "Critical thinkers", "This course is for people interested in the theoretical side of the MCU" ,"Psychology majors", "MCU fans", "People who want the Hulk to become The Maestro"],
+    youtube_code: "https://www.youtube.com/embed/AUlR6EtGsxQ?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
 
