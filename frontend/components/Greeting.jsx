@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ currentUser, logout, openModal, ownProps}) => {
+
+    const handleLogout = () => {
+        logout();
+        ownProps.history.push('/');
+    }
 
     const loggedOutGreeting = () => (
         <div className='buttons'>
@@ -38,7 +43,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                         </div>
                         <Link to={`/api/users/${currentUser.id}/edit`} className='drop-down-option'>Account</Link>
                         <div className='line'></div>
-                        <div className='drop-down-option' onClick={logout}>Logout</div>
+                        <div className='drop-down-option' onClick={handleLogout}>Logout</div>
                     </div>
                 <br/>
             </div>

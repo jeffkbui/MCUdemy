@@ -1090,7 +1090,13 @@ __webpack_require__.r(__webpack_exports__);
 var Greeting = function Greeting(_ref) {
   var currentUser = _ref.currentUser,
       logout = _ref.logout,
-      openModal = _ref.openModal;
+      openModal = _ref.openModal,
+      ownProps = _ref.ownProps;
+
+  var handleLogout = function handleLogout() {
+    logout();
+    ownProps.history.push('/');
+  };
 
   var loggedOutGreeting = function loggedOutGreeting() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1137,7 +1143,7 @@ var Greeting = function Greeting(_ref) {
       className: "line"
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "drop-down-option",
-      onClick: logout
+      onClick: handleLogout
     }, "Logout")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
   };
 
@@ -2679,14 +2685,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/modal_actions */ "./frontend/actions/modal_actions.js");
 /* harmony import */ var _components_Greeting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Greeting */ "./frontend/components/Greeting.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
 
 
-var mapStateToProps = function mapStateToProps(state) {
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  debugger;
   return {
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    ownProps: ownProps
   };
 };
 
@@ -2701,7 +2711,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_components_Greeting__WEBPACK_IMPORTED_MODULE_3__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_components_Greeting__WEBPACK_IMPORTED_MODULE_3__["default"])));
 
 /***/ }),
 

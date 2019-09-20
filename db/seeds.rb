@@ -141,4 +141,55 @@ Course.create!(
     youtube_code: "https://www.youtube.com/embed/pr0MB6GH-oM?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
 )
 
+Course.create!(
+    title: "How to Make a SPIDER-MAN WEB SHOOTER at home", 
+    description: "Crafts course", 
+    instructor: "Mad Stuff With Rob",
+    price: 7.99, 
+    duration: 16, 
+    what_youll_learn: ["How to build a web-shooter", "Work with silly string", "Work with different types of plastics"], 
+    requirements: ["Should be 18 years or older OR accompanied by an adult", "Have access to materials and tools"],
+    course_description: "In this video I teach you how to make the Spiderman Web shooter with easily accessible materials like a sketch pen, cardboard, spring etc. Homies! Like always I got your back on making cool things and impressing your friends with Marvel gadgets. Video is in HINDI but you can put your ENGLISH subtitles on and watch",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 234,
+    num_reviews: 56,
+    who_this_course_is_for: ["Spidey fans!", "People who love arts and crafts", "Those who want to become Spider-Man"],
+    youtube_code: "https://www.youtube.com/embed/GCfG9QAPrWY?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
+Course.create!(
+    title: "Marvel Theory: Ultron Will Return", 
+    description: "Theoretical course on the potential return of Ultron, and reasons behind it", 
+    instructor: "Screen Rant",
+    price: 14.99, 
+    duration: 10, 
+    what_youll_learn: ["How the Avengers villain Ultron could return", "Why would Ultron return?", "Key differences between Thanos and Ultron", "How robotics in Ultron can end the Avengers"], 
+    requirements: ["Have seen Avengers: Age of Ultron", "Basic knowledge of MCU backstory", "General knowledge of MCU timelines", "Character abilities"],
+    course_description: "Ultron is, of course, the classic robotic Marvel villain who was created by Roy Thomas and John Buscema back in 1968. He was created by Hank Pym in the comic books, but when he made his live action movie debut in 2015's Avengers: Age of Ultron, he was inadvertently created by Robert Downey Jr.'s Tony Stark and Mark Ruffalo's Bruce Banner. In the end, the powerful metallic antagonist - who was voiced by the great James Spader in the movie - was seemingly defeated, but there's a theory that he'll actually return in the Marvel Cinematic Universe in Phase 4 of the franchise. In this video, we'll be discussing how that might be possible. It's based on the fact that part of an Ultron drone was seen in 2017's Spider-Man: Homecoming, in the possession of Michael Keaton's Adrian Toomes, as part of his black market dealings in technology salvaged from the sites of superhero battles (he also had Chitauri technology from the Battle of New York in 2012's The Avengers, as well as Dark Elf technology from the events of 2014's Thor: The Dark World). While the drone wouldn't have contained Ultron's full consciousness, there's a chance it might have contained a seed-like code that would allow Ultron to be reborn, should the drone ever get exposed to a computer network that it could jump into.",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 10655,
+    num_reviews: 8599,
+    who_this_course_is_for: ["MCU fans", "Critical thinkers", "Ultron fanatics", "Theorists", "Philosophy majors"],
+    youtube_code: "https://www.youtube.com/embed/ss0DFSHKnNo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
+Course.create!(
+    title: "Brothers?: What Everyone Forgot About Thanos and Tony Stark's Relationship", 
+    description: "Theoretical course on the potential relationship between Thanos and Tony Stark", 
+    instructor: "UpNext",
+    price: 50.99, 
+    duration: 5, 
+    what_youll_learn: ["Tony Stark backstory", "Thanos backstory", "Understanding MCU timelines"], 
+    requirements: ["Have seen Avengers: Infinity War", "Have seen Avengers: Endgame", "General Understanding of Thanos", "General Understanding of Iron Man history"],
+    course_description: "Everybody knows (or should know) about Marvel's infamous villain Titan, Thanos. With the popular film series Marvel's Avengers, Thanos was introduced as the absolute super villain with the task of destroying half of the universe's population. Most of us who have seen the movies know both Thanos and Tony Stark, but what many of us don't know is a potential deeper connection between the two. This course goes over exactly that - the theory that there is a deeper connection between Thanos and Tony Stark!",
+    num_lectures: 1,
+    num_videos: 1,
+    num_students: 3,
+    num_reviews: 2,
+    who_this_course_is_for: ["MCU fans", "Critical thinkers", "Thanos fanatics", "Theorists", "Philosophy majors"],
+    youtube_code: "https://www.youtube.com/embed/5Wac2WKycZw?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+)
+
 
