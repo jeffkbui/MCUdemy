@@ -1,3 +1,330 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: font-url('udemy-font-4.ttf');
+ }
+
+ .account {
+    display: flex;
+    flex-direction: row;
+ }
+
+ .user-dropdown {
+   display: none;
+   position: absolute;
+   top: 55px;
+   right: 40px;
+   background-color: white;
+   min-width: 200px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   height: 162px;
+   width: 280px;
+   z-index: 4000;
+   font-family: 'open_sansregular';
+   color: #686f7a;
+   padding-bottom: 7px;
+ }
+
+ .account:hover .user-dropdown {
+   display: block;
+ }
+
+ .dropdown-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+ }
+
+ .account-info-container {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .full-name {
+   font-size: 14px;
+   margin-left: 10px;
+   margin-top: 5px;
+ }
+
+ .email {
+   font-size: 12px;
+   margin-left: 10px;
+ }
+
+.drop-down-option {
+   display: flex;
+   align-items: center;
+   color: #29303b;
+   font-family: 'open_sansregular';
+   font-size: 15px;
+   font-weight: 400;
+   padding-left: 20px;
+   height: 40px;
+   text-decoration: none;
+ }
+
+.drop-down-option:hover {
+   background-color: #E8E8E8;
+   color: #007791;
+   cursor: pointer;
+}
+
+.header {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   height: 65px;
+   }
+
+.logo {
+   font-size: 23px;
+   color: white;
+   padding-left: 3px;
+   padding-right: 3px;
+   background-color: #ec5252;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   text-decoration: none;
+}
+
+
+.header-logo {
+   display: flex;
+   height: 50px;
+   font-size: 18px;
+   color: #655B52;
+   font-weight: bolder;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding: auto;
+   align-items: center;
+   text-decoration: none;
+}
+
+.login {
+   color: #686f7a;
+   background-color: #fff;
+   padding: 11px;
+   border: 1px solid #686f7a;
+   border-radius: 2px;
+   font-family: 'open_sansregular';
+   font-size: 15px;
+   outline: none;
+}
+
+.login:hover {
+   border: 1px solid black;
+   color: black;
+   cursor: pointer;
+}
+
+.signup {
+   color: white;
+   background-color: #ec5252;
+   border: 1px solid #ec5252;
+   padding: 11px;
+   border-radius: 2px;
+   font-family: 'open_sansregular';
+   font-size: 15px;
+   outline: none;
+}
+
+.signup:hover {
+   background-color: darkred;
+   cursor: pointer;
+}
+
+.buttons {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   justify-content: space-between;
+   width: 147px;
+}
+
+.header-categories {
+   display: flex;
+   align-items: center;
+   color: #686f7a;
+   font-family: 'open_sansregular';
+   font-size: 14px;
+}
+
+.header-categories:hover {
+   cursor:pointer;
+   color: black;
+}
+
+.header-search-bar {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   color: #686f7a;
+   background-color: #E8E8E8;
+   height: 45px;
+   border-radius: 2px;
+   width: 405px;
+   border: none;
+}
+
+.search-input {
+   font-family: 'open_sansregular';
+   border: none;
+   outline: none;
+   background-color: #E8E8E8;
+   height: 20px;
+   width: 340px;
+   font-size: 14px;
+   margin-left: 9px;
+   font-weight: 100;
+}
+
+.magnifying-icon {
+   height: 15px;
+   width: 15px;
+}
+
+.search-submit {
+   display: flex;
+   justify-content: center;
+   height: 45px;
+   width: 45px;
+   background-color: #E8E8E8; 
+   border: none;
+   outline: none;
+   margin-left: 10px;
+   font-size: 15px;
+}
+
+.search-submit:hover {
+   background-color: #13ADAD;
+   border-top-right-radius: 2px;
+   border-bottom-right-radius: 2px;
+   filter: invert(100%);
+}
+
+.categories-icon {
+   height: 15px;
+   width: 15px;
+   padding-right: 5px;
+}
+
+.cart {
+   text-align: center;
+   color:white;
+   font-size: 8px;
+   font-family: 'open_sansregular';
+}
+
+.cart-icon {
+   margin-top: 5px;
+   height: 30px;
+   width: 30px;
+   border-radius: 100%;
+   padding: 6px;
+}
+
+.cart-icon:hover {
+   background-color: #DCDCDC;
+   cursor: pointer;
+}
+
+.cart-icon:hover ~ .cart {
+   color: red;
+}
+
+.cart-icon:active ~ .cart {
+   color:maroon;
+}
+
+.splash {
+   display: flex;
+   flex-direction: column;
+   background-image: url('https://images5.alphacoders.com/320/thumb-1920-320927.jpg');
+   height: 500px;
+   width: 100%;
+}
+.splash2 {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   background-image: url('https://wallpapertag.com/wallpaper/full/8/0/b/442864-cool-light-purple-backgrounds-1920x1080-for-iphone.jpg');
+   height: 85px;
+   width: 100%;
+}
+
+.header-text1 {
+   color: white;
+   font-family: 'open_sansregular';
+   font-size: 40px;
+   margin-top: 13%;
+   margin-left: 5%;
+}
+
+.header-text2 {
+   color: white;
+   font-family: 'open_sansregular';
+   font-size: 18px;
+   margin-left: 5%;
+}
+
+.mouse-icon {
+   filter: invert(100%);
+   height: 40px;
+   width: 40px;
+   margin-right: 20px;
+}
+
+.splash2-textbox {
+   display: flex;
+   flex-direction: column;
+}
+
+.splash2-textbox2 {
+   display: flex;
+   flex-direction: column;
+   margin-left: 13px;
+}
+
+.splash2-text {
+   color: white;
+   font-family: 'open_sansregular';
+}
+
+.splash2-text2 {
+   color: white;
+   font-family: 'open_sansregular';
+}
+
+.checkbox-icon {
+   filter: invert(100%);
+   height: 45px;
+   width: 40px;
+   margin-right: 20px;
+}
+
+.clock-icon {
+   filter: invert(100%);
+   height: 45px;
+   width: 45px;
+}
+
+.splash2-box {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 275px;
+   align-items: center;
+}
+
+.splash2-box2 {
+   display: flex;
+   flex-direction: row;
+   width: 275px;
+   align-items: center;
+}

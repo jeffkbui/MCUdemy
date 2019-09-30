@@ -19,6 +19,13 @@ class CourseShow extends React.Component {
         }
     }
 
+    handlePopUp() {
+        const popup = document.getElementById('myPopup');
+        popup.classList.toggle('show');
+        setTimeout(() => popup.classList.toggle('show'), 5000);
+    }
+
+
     render() {
         const wylArray = this.props.course.what_youll_learn || [];
         const renderWyl = wylArray.map( (section) => (
@@ -49,11 +56,30 @@ class CourseShow extends React.Component {
                     <div className='header-logo'>
                         <Link to='/' className='logo'>MCU</Link><Link to='/' className='header-logo'>demy</Link>
                     </div>
-                    <div className='header-categories'>
-                        <img className='categories-icon' src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="categories"/>
-                        Categories
+                    <div className='categories-dropdown-main-container'>
+                        <div className='header-categories'>
+                            <img className='categories-icon' src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="categories"/>
+                            Categories
+                        </div>
+                        <div className='categories-dropdown-body'>
+                            <div className='categories-item'>
+                                Thor
+                            </div>
+                            <div className='categories-item'>
+                                Iron Man
+                            </div>
+                            <div className='categories-item'>
+                                Captain America
+                            </div>
+                            <div className='categories-item'>
+                                Hulk
+                            </div>
+                            <div className='categories-item'>
+                                Thanos
+                            </div>
+                        </div>
                     </div>
-                    <form className='header-search-bar'>
+                    <form className='header-search-bar' onSubmit={() => this.props.history.push('/api/search-courses')}>
                         <input className='search-input' type="text" placeholder='Search for anything'/>
                         <div>
                             <button className='search-submit' type="submit">
@@ -67,6 +93,7 @@ class CourseShow extends React.Component {
                     </div>
                     <div>
                         <img className='cart-icon' src="https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png" alt="cart"/>
+                        <div className='cart'>Cart is empty</div>
                     </div>
                     <GreetingContainer></GreetingContainer>
                 </header>
@@ -148,8 +175,13 @@ class CourseShow extends React.Component {
                                 ${this.props.course.price}
                             </div>
                             <div className='course-buttons'>
-                                <div className='add-to-cart'>
+                                <div className='add-to-cart' onClick={this.handlePopUp}>
                                     Add to cart
+                                </div>
+                                <div className='popup'>
+                                    <div className='popup-message' id='myPopup'>
+                                        MCUdemy is experiencing some technical difficulties with adding courses to the cart. Our scheduled maintenance is estimated to finish within 5 hours. Thank you for your patience.
+                                    </div>
                                 </div>
                                 <div className='buy-now' onClick={() => this.props.openModal('video')}>
                                     Preview Course

@@ -671,6 +671,15 @@ function (_React$Component) {
       }
     }
   }, {
+    key: "handlePopUp",
+    value: function handlePopUp() {
+      var popup = document.getElementById('myPopup');
+      popup.classList.toggle('show');
+      setTimeout(function () {
+        return popup.classList.toggle('show');
+      }, 5000);
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this = this;
@@ -710,13 +719,30 @@ function (_React$Component) {
         to: "/",
         className: "header-logo"
       }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-dropdown-main-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-categories"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "categories-icon",
         src: "https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png",
         alt: "categories"
-      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "header-search-bar"
+      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-dropdown-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Thor"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Iron Man"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Captain America"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Hulk"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Thanos"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "header-search-bar",
+        onSubmit: function onSubmit() {
+          return _this.props.history.push('/api/search-courses');
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "search-input",
         type: "text",
@@ -740,7 +766,9 @@ function (_React$Component) {
         className: "cart-icon",
         src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
         alt: "cart"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cart"
+      }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-header-divider"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-header"
@@ -813,8 +841,14 @@ function (_React$Component) {
       }, "$", this.props.course.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-buttons"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "add-to-cart"
+        className: "add-to-cart",
+        onClick: this.handlePopUp
       }, "Add to cart"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "popup"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "popup-message",
+        id: "myPopup"
+      }, "MCUdemy is experiencing some technical difficulties with adding courses to the cart. Our scheduled maintenance is estimated to finish within 5 hours. Thank you for your patience.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "buy-now",
         onClick: function onClick() {
           return _this.props.openModal('video');
@@ -1231,13 +1265,30 @@ function (_React$Component) {
         to: "/",
         className: "header-logo"
       }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-dropdown-main-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-categories"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "categories-icon",
         src: "https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png",
         alt: "categories"
-      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "header-search-bar"
+      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-dropdown-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Thor"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Iron Man"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Captain America"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Hulk"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Thanos"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "header-search-bar",
+        onSubmit: function onSubmit() {
+          return _this.props.history.push('/api/search-courses');
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "search-input",
         type: "text",
@@ -1837,15 +1888,29 @@ function (_React$Component) {
         to: "/",
         className: "header-logo"
       }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-dropdown-main-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-categories"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "categories-icon",
         src: "https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png",
         alt: "categories"
-      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-dropdown-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Thor"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Iron Man"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Captain America"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Hulk"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Thanos"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "header-search-bar",
         onSubmit: function onSubmit() {
-          return props.history.push('/api/courses');
+          return _this.props.history.push('/api/search-courses');
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "search-input",
@@ -2278,6 +2343,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Modal */ "./frontend/components/Modal.jsx");
 /* harmony import */ var _containers_course_index_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/course_index_container */ "./frontend/containers/course_index_container.js");
+/* harmony import */ var _SearchCourses__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SearchCourses */ "./frontend/components/SearchCourses.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2295,6 +2361,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -2336,12 +2403,26 @@ function (_React$Component) {
         to: "/",
         className: "header-logo"
       }, "demy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-dropdown-main-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-categories"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "categories-icon",
         src: "https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png",
         alt: "categories"
-      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }), "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-dropdown-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Thor"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Iron Man"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Captain America"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Hulk"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories-item"
+      }, "Thanos"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "header-search-bar",
         onSubmit: function onSubmit() {
           return _this.props.history.push('/api/search-courses');
@@ -2693,7 +2774,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
-  debugger;
   return {
     currentUser: state.entities.users[state.session.id],
     ownProps: ownProps
@@ -2928,15 +3008,25 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _components_Splash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Splash */ "./frontend/components/Splash.jsx");
+/* harmony import */ var _actions_course_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/course_actions */ "./frontend/actions/course_actions.js");
+
 
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
-  return {};
+  return {
+    courses: Object.keys(state.entities.courses).map(function (id) {
+      return state.entities.courses[id];
+    })
+  };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    fetchCourses: function fetchCourses() {
+      return dispatch(Object(_actions_course_actions__WEBPACK_IMPORTED_MODULE_2__["fetchCourses"])());
+    }
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_components_Splash__WEBPACK_IMPORTED_MODULE_1__["default"]));
@@ -3027,12 +3117,12 @@ document.addEventListener('DOMContentLoaded', function () {
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])();
   }
 
-  ;
-  window.login = _utils_session_api_util__WEBPACK_IMPORTED_MODULE_2__["login"];
-  window.signup = _utils_session_api_util__WEBPACK_IMPORTED_MODULE_2__["signup"];
-  window.logout = _utils_session_api_util__WEBPACK_IMPORTED_MODULE_2__["logout"];
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  ; // window.login = login;
+  // window.signup = signup;
+  // window.logout = logout;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
+
   var root = document.getElementById('root');
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Root__WEBPACK_IMPORTED_MODULE_4__["default"], {
     store: store

@@ -3,6 +3,7 @@ import GreetingContainer from '../containers/greeting_container';
 import { Link, Redirect } from 'react-router-dom';
 import Modal from './Modal';
 import CourseIndexContainer from '../containers/course_index_container';
+import SearchCourses from './SearchCourses';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -24,9 +25,28 @@ class Splash extends React.Component {
                         <Link to='/' className='logo'>MCU</Link><Link to='/' className='header-logo'>demy</Link>
                         
                     </div>
-                    <div className='header-categories'>
-                        <img className='categories-icon' src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="categories"/>
-                        Categories
+                    <div className='categories-dropdown-main-container'>
+                        <div className='header-categories'>
+                            <img className='categories-icon' src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png" alt="categories"/>
+                            Categories
+                        </div>
+                        <div className='categories-dropdown-body'>
+                            <div className='categories-item'>
+                                Thor
+                            </div>
+                            <div className='categories-item'>
+                                Iron Man
+                            </div>
+                            <div className='categories-item'>
+                                Captain America
+                            </div>
+                            <div className='categories-item'>
+                                Hulk
+                            </div>
+                            <div className='categories-item'>
+                                Thanos
+                            </div>
+                        </div>
                     </div>
                     <form className='header-search-bar' onSubmit={() => this.props.history.push('/api/search-courses')}>
                         <input className='search-input' type="text" placeholder='Search for anything'/>
