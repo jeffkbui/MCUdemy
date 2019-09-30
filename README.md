@@ -10,11 +10,11 @@ Without logging in, user will be able to browse a selection of courses that are 
 
 ## Backend
 
-Ruby on Rails, PostgreSQL, Webpack and NPM
+Ruby on Rails, PostgreSQL
 
 ## Frontend
 
-JavaScript, React, Redux, HTML5, CSS3
+JavaScript, React, Redux, Webpack, NPM, HTML5, CSS3
 
 ## Challenges
 
