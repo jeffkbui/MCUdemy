@@ -1556,14 +1556,18 @@ function (_React$Component) {
         className: "lecture-show-header-line"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "lecture-show-header-title"
-      }, this.props.lecture.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+      }, this.props.lecture.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "lecture-show-main-video-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
         id: "ytplayer",
         type: "text/html",
         width: "1280",
         height: "575",
         src: "https://www.youtube.com/embed/hFRDkSR2OEo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0",
         frameBorder: "0"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "lecture-show-main-content-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-nav-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-content",
@@ -1604,7 +1608,7 @@ function (_React$Component) {
         className: "course-nav-line"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "lecture-content-main-container"
-      }, this.state.component), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.state.component)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "lecture-show-footer-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-logo"

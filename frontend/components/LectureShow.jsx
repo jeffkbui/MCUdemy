@@ -36,39 +36,43 @@ class LectureShow extends React.Component {
                         {this.props.lecture.title}
                     </div>
                 </div>
+                <div className='lecture-show-main-video-container'>
+                    <iframe 
+                        id="ytplayer" 
+                        type="text/html" 
+                        width="1280"
+                        height="575" 
+                        src="https://www.youtube.com/embed/hFRDkSR2OEo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+                        frameBorder="0"> 
+                    </iframe>
+                </div>
+                <div className='lecture-show-main-content-container'>
 
-                <iframe 
-                    id="ytplayer" 
-                    type="text/html" 
-                    width="1280"
-                    height="575" 
-                    src="https://www.youtube.com/embed/hFRDkSR2OEo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
-                    frameBorder="0"> 
-                </iframe>
+                    <div className='course-nav-header'>
+                        <div className='course-content' onClick={() => this.setState({component: (<CourseContent />)})}>
+                            Course content
+                        </div>
+                        <div className='overview' onClick={() => this.setState({component: (<Overview />)})}>
+                            Overview
+                        </div>
+                        <div className='qa' onClick={() => this.setState({component: (<QA />)})}>
+                            QA
+                        </div>
+                        <div className='bookmarks' onClick={() => this.setState({component: (<Bookmarks />)})}>
+                            Bookmarks
+                        </div>
+                        <div className='announcements' onClick={() => this.setState({component: (<Announcements />)})}>
+                            Announcements
+                        </div>
+                    </div>
+                    
+                    <div className='course-nav-line'></div>
 
-                <div className='course-nav-header'>
-                    <div className='course-content' onClick={() => this.setState({component: (<CourseContent />)})}>
-                        Course content
-                    </div>
-                    <div className='overview' onClick={() => this.setState({component: (<Overview />)})}>
-                        Overview
-                    </div>
-                    <div className='qa' onClick={() => this.setState({component: (<QA />)})}>
-                        QA
-                    </div>
-                    <div className='bookmarks' onClick={() => this.setState({component: (<Bookmarks />)})}>
-                        Bookmarks
-                    </div>
-                    <div className='announcements' onClick={() => this.setState({component: (<Announcements />)})}>
-                        Announcements
+                    <div className='lecture-content-main-container'>
+                        {this.state.component}
                     </div>
                 </div>
                 
-                <div className='course-nav-line'></div>
-
-                <div className='lecture-content-main-container'>
-                    {this.state.component}
-                </div>
 
                 <div className='lecture-show-footer-2'>
                     <div className='header-logo'>
