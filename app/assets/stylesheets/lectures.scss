@@ -510,7 +510,7 @@
  .categories-dropdown-body {
     display: none;
     position: absolute;
-    margin-top: 23px;
+   //  margin-right: 50px;
     padding-right: 23px;
     padding-left: 23px;
     padding-top: 10px;
@@ -526,7 +526,7 @@
  .categories-item {
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 15px;
+    font-size: 11.5px;
  }
  
  .categories-dropdown-main-container:hover .categories-dropdown-body {
@@ -540,15 +540,15 @@
  .popup .popup-message {
     font-size: 12px;
     visibility: hidden;
-    width: 300px;
-    background-color: #faebeb;
-    color: maroon;
+    width: 100px;
+    background-color: rgb(83, 197, 83);
+    color: white;
     text-align: center;
     border-radius: 6px;
     padding: 8px;
     position: absolute;
     z-index: 1;
-    margin-left: -7px;
+    margin-left: 95px;
     opacity: 1;
  }
  

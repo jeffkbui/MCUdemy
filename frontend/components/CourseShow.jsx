@@ -22,7 +22,7 @@ class CourseShow extends React.Component {
     handlePopUp() {
         const popup = document.getElementById('myPopup');
         popup.classList.toggle('show');
-        setTimeout(() => popup.classList.toggle('show'), 5000);
+        setTimeout(() => popup.classList.toggle('show'), 2000);
     }
 
 
@@ -92,8 +92,8 @@ class CourseShow extends React.Component {
                         <a className='github' href="https://github.com/jeffkbui/MCUdemy/wiki">GitHub</a>
                     </div>
                     <div>
-                        <img className='cart-icon' src="https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png" alt="cart"/>
-                        <div className='cart'>Cart is empty</div>
+                        {/* <img className='cart-icon' src="https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png" alt="cart"/>
+                        <div className='cart'>Cart is empty</div> */}
                     </div>
                     <GreetingContainer></GreetingContainer>
                 </header>
@@ -180,7 +180,8 @@ class CourseShow extends React.Component {
                                 </div>
                                 <div className='popup'>
                                     <div className='popup-message' id='myPopup'>
-                                        MCUdemy is experiencing some technical difficulties with adding courses to the cart. Our scheduled maintenance is estimated to finish within 5 hours. Thank you for your patience.
+                                        Added to cart!
+                                        {/* MCUdemy is experiencing some technical difficulties with adding courses to the cart. Our scheduled maintenance is estimated to finish within 5 hours. Thank you for your patience. */}
                                     </div>
                                 </div>
                                 <div className='buy-now' onClick={() => this.props.openModal('video')}>

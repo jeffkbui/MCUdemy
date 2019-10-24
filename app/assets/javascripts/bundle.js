@@ -677,7 +677,7 @@ function (_React$Component) {
       popup.classList.toggle('show');
       setTimeout(function () {
         return popup.classList.toggle('show');
-      }, 5000);
+      }, 2000);
     }
   }, {
     key: "render",
@@ -762,13 +762,7 @@ function (_React$Component) {
       }, "LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "github",
         href: "https://github.com/jeffkbui/MCUdemy/wiki"
-      }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "cart-icon",
-        src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
-        alt: "cart"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "cart"
-      }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-header-divider"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-header"
@@ -848,7 +842,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "popup-message",
         id: "myPopup"
-      }, "MCUdemy is experiencing some technical difficulties with adding courses to the cart. Our scheduled maintenance is estimated to finish within 5 hours. Thank you for your patience.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Added to cart!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "buy-now",
         onClick: function onClick() {
           return _this.props.openModal('video');
@@ -2450,13 +2444,7 @@ function (_React$Component) {
       }, "LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "github",
         href: "https://github.com/jeffkbui/MCUdemy/wiki"
-      }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "cart-icon",
-        src: "https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png",
-        alt: "cart"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "cart"
-      }, "Cart is empty")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "splash"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-text1"
