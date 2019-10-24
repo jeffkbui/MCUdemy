@@ -822,7 +822,10 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-fixed-info"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "video-preview"
+        className: "video-preview",
+        onClick: function onClick() {
+          return _this.props.openModal('video');
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
         id: "ytplayer",
         type: "text/html",
@@ -830,6 +833,8 @@ function (_React$Component) {
         height: "215",
         src: this.props.course.youtube_code,
         frameBorder: "0"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "testing"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-price"
       }, "$", this.props.course.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

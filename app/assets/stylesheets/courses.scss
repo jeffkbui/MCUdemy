@@ -293,6 +293,13 @@
     width: 100%;
     outline: none;
  }
+
+ .testing {
+   width: 355px;
+   height: 215px;
+   z-index: 1000;
+   position: absolute;
+ }
  
  .video-preview:hover {
     cursor: pointer;

@@ -158,7 +158,7 @@ class CourseShow extends React.Component {
                             height: ($('body').height() - 400)
                         }}>
                         <div className='course-fixed-info'>
-                            <button className='video-preview'>
+                            <button className='video-preview' onClick={() => this.props.openModal('video')}>
                                 {/* <div className='play-button-circle'>
                                     <img className='play-button' src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png" alt=""/>
                                 </div> */}
@@ -170,6 +170,7 @@ class CourseShow extends React.Component {
                                     src={this.props.course.youtube_code}
                                     frameBorder="0"> 
                                 </iframe>
+                                <div className='testing'></div>
                             </button>
                             <div className='course-price'>
                                 ${this.props.course.price}
