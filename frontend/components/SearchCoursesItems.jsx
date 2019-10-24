@@ -18,14 +18,17 @@ class SearchCoursesItem extends React.Component {
                 <Link to={`/api/courses/${this.props.course.id}`} className='course-item-link'>
                     <div className='search-item-main-container'>
                         <div className='search-item-body'>
-                            <iframe 
-                                id="ytplayer" 
-                                type="text/html" 
-                                width="231" 
-                                height="122" 
-                                src={this.props.course.youtube_code}
-                                frameBorder="0"> 
-                            </iframe>
+                            <div className='course-index-video-preview'>
+                                <iframe 
+                                    id="ytplayer" 
+                                    type="text/html" 
+                                    width="231" 
+                                    height="122" 
+                                    src={this.props.course.youtube_code}
+                                    frameBorder="0"> 
+                                </iframe>
+                                <div className='youtube-blocker'></div>
+                            </div>
 
                             <div className='search-item-text-container'>
                                 <div className='search-item-title'>

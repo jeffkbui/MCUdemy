@@ -17,14 +17,17 @@ class LectureIndexItem extends React.Component {
                 {/* <div className='my-courses-thumbnail'>
 
                 </div> */}
-                <iframe 
-                    id="ytplayer" 
-                    type="text/html" 
-                    width="231" 
-                    height="122" 
-                    src="https://www.youtube.com/embed/hFRDkSR2OEo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=15&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
-                    frameBorder="0"> 
-                </iframe>
+                <div className='course-index-video-preview'>
+                    <iframe 
+                        id="ytplayer" 
+                        type="text/html" 
+                        width="231" 
+                        height="122" 
+                        src="https://www.youtube.com/embed/hFRDkSR2OEo?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&origin=https://youtubeembedcode.com&modestbranding=1&autohide=1&showinfo=0"
+                        frameBorder="0"> 
+                    </iframe>
+                    <div className='youtube-blocker'></div>
+                </div>
                 <div className='my-courses-title'>
                     {this.props.lecture.title}
                 </div>
