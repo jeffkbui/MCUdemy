@@ -16,7 +16,7 @@ class CourseIndexItem extends React.Component {
             <div>
                 <Link to={`/api/courses/${this.props.course.id}`} className='course-item-link'>
                 <div className='course-item-main' onClick={this.handleRedirect}>
-                    <div>
+                    <div className='course-index-video-preview'>
                         <iframe 
                             id="ytplayer" 
                             type="text/html" 
@@ -25,6 +25,7 @@ class CourseIndexItem extends React.Component {
                             src={this.props.course.youtube_code}
                             frameBorder="0"> 
                         </iframe>
+                        <div className='youtube-blocker'></div>
                     </div>
                     <div className='item-title'>
                         {this.props.course.title}

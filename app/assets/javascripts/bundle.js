@@ -575,13 +575,17 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "course-item-main",
         onClick: this.handleRedirect
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "course-index-video-preview"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
         id: "ytplayer",
         type: "text/html",
         width: "231",
         height: "122",
         src: this.props.course.youtube_code,
         frameBorder: "0"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "youtube-blocker"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "item-title"
       }, this.props.course.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

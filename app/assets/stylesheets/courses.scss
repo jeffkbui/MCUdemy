@@ -635,4 +635,16 @@
     margin-left: 15px;
     margin-top: 30px;
  }
+
+ .youtube-blocker {
+   position: absolute;
+   width: 231px;
+   height: 122px;
+   z-index: 1000;
+ }
+
+ .course-index-video-preview {
+    display: flex;
+    justify-content: center;
+ }
  
