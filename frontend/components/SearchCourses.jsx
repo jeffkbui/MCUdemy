@@ -6,6 +6,10 @@ import GreetingContainer from '../containers/greeting_container';
 class SearchCourses extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            filteredCourses: []
+        };
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
@@ -13,12 +17,45 @@ class SearchCourses extends React.Component {
         window.scrollTo(0, 0)
     }
 
-    render() {
-        const courses = this.props.courses.map(course => {
-            return (
-                <SearchCoursesItems key={course.id} course={course} ownProps={this.props}/>
-            )
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            filteredCourses: nextProps.courses.map(course => {
+                return (
+                    <SearchCoursesItems key={course.id} course={course} ownProps={this.props}/>
+                )
+            })
         })
+    }
+
+    handleChange(e) {
+        let allCourses = [];
+        let selectedCourses = [];
+        if (e.target.value !== '') {
+            debugger;
+            allCourses = this.props.courses;
+            selectedCourses = allCourses.filter(course => {
+                let lowerCased = course.description.toLowerCase();
+                let searchFilter = e.target.value.toLowerCase();
+                return lowerCased.includes(searchFilter);
+            })
+        } else {
+            selectedCourses = this.props.courses;
+        }
+        this.setState({
+            filteredCourses: selectedCourses.map(course => {
+                return (
+                    <SearchCoursesItems key={course.id} course={course} ownProps={this.props}/>
+                )
+            })
+        })
+    }
+
+    render() {
+        // const courses = this.props.courses.map(course => {
+        //     return (
+        //         <SearchCoursesItems key={course.id} course={course} ownProps={this.props}/>
+        //     )
+        // })
 
         return (
             <div>
@@ -51,7 +88,7 @@ class SearchCourses extends React.Component {
                         </div>
                     </div>
                     <form className='header-search-bar' onSubmit={() => this.props.history.push('/api/search-courses')}>
-                        <input className='search-input' type="text" placeholder='Search for anything'/>
+                        <input onChange={this.handleChange} className='search-input' type="text" placeholder='Search for anything'/>
                         <div>
                             <button className='search-submit' type="submit">
                                 <img className='magnifying-icon' src="https://image.flaticon.com/icons/png/512/63/63322.png" alt=""/>
@@ -75,7 +112,7 @@ class SearchCourses extends React.Component {
 
                 <div className='search-main-container'>
                     <div className='search-courses-main'>
-                        {courses}
+                        {this.state.filteredCourses}
                     </div>
                     <div className='not-sure-container'>
                         <div className='not-sure'>
